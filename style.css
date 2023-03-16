@@ -1,1 +1,52 @@
+html {
+    background-color: #FFF0CC;
+}
 
+.answerPage {
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 50px;
+
+
+}
+
+.next {
+
+    background-color: #FFBD3A;
+    border-radius: 14px;
+    font-size: large;
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+
+
+}
+
+.bear {
+    display: flex;
+    margin: auto;
+}
+
+
+@media screen and (min-width:600px) {
+    .next {
+        background-color: #FFBD3A;
+        border-radius: 14px;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 200px;
+        height: 50px;
+    }
+
+}
+
+;
