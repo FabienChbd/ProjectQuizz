@@ -78,6 +78,7 @@ header {
     text-align: center;
 }
 
+
 @media screen and (min-width: 600px) {
     footer {
         flex-direction: row;
@@ -91,6 +92,7 @@ header {
         left: 10%;
         width: 80%;
     }
+
 
     .buttonNext {
         display: flex;
