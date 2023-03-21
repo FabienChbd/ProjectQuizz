@@ -5,58 +5,58 @@
     gap: 20px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "Question-1 Question-1 Question-1"
-        ". Réponse-1 ."
-        ". Réponse-2 ."
-        ". Réponse-3 ."
-        ". Réponse-4 ."
-        ". Bouton-Valider .";
+        "question-1 question-1 question-1"
+        ". reponse-1 ."
+        ". reponse-2 ."
+        ". reponse-3 ."
+        ". reponse-4 ."
+        ". valider .";
 }
 
-.Question-1 {
+.question-1 {
     align-self: center;
-    grid-area: Question-1;
+    grid-area: question-1;
     background-color: rgb(192, 47, 47);
 }
 
-.Réponse-1 {
+.reponse-1 {
     align-self: center;
-    grid-area: Réponse-1;
+    grid-area: reponse-1;
     background-color: rgb(30, 30, 198);
 }
 
-.Réponse-2 {
+.reponse-2 {
     align-self: center;
-    grid-area: Réponse-2;
+    grid-area: reponse-2;
     background-color: blueviolet;
 }
 
-.Réponse-3 {
+.reponse-3 {
     align-self: center;
-    grid-area: Réponse-3;
+    grid-area: reponse-3;
     background-color: rgb(31, 192, 96);
 }
 
-.Réponse-4 {
+.reponse-4 {
     align-self: center;
-    grid-area: Réponse-4;
+    grid-area: reponse-4;
     background-color: crimson;
 }
 
-.Bouton-Valider, .Valider {
+.valider {
     justify-self: center;
     align-self: center;
-    grid-area: Bouton-Valider;
+    grid-area: valider;
     background-color: coral;
 
 }
 
-.Question-1,
-.Réponse-1,
-.Réponse-2,
-.Réponse-3,
-.Réponse-4,
-.Bouton-Valider {
+.question-1,
+.reponse-1,
+.reponse-2,
+.reponse-3,
+.reponse-4,
+.valider {
     width: auto;
     height: auto;
     border: 2px rgb(101, 93, 93) solid;
