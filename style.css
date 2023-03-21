@@ -1,1 +1,64 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Question-N°1 Question-N°1 Question-N°1"
+        ". Réponse-1 ."
+        ". Réponse-2 ."
+        ". Réponse-3 ."
+        ". Réponse-4 ."
+        ". Bouton-Valider .";
+}
 
+.Question-N°1 {
+    justify-self: center;
+    align-self: center;
+    grid-area: Question-N°1;
+    background-color: rgb(192, 47, 47);
+}
+
+.Réponse-1 {
+    align-self: center;
+    grid-area: Réponse-1;
+    background-color: rgb(30, 30, 198);
+}
+
+.Réponse-2 {
+    align-self: center;
+    grid-area: Réponse-2;
+    background-color: blueviolet;
+}
+
+.Réponse-3 {
+    align-self: center;
+    grid-area: Réponse-3;
+    background-color: rgb(31, 192, 96);
+}
+
+.Réponse-4 {
+    align-self: center;
+    grid-area: Réponse-4;
+    background-color: crimson;
+}
+
+.Bouton-Valider {
+    justify-self: center;
+    align-self: center;
+    grid-area: Bouton-Valider;
+    background-color: coral;
+
+}
+
+.Question-N°1,
+.Réponse-1,
+.Réponse-2,
+.Réponse-3,
+.Réponse-4,
+.Bouton-Valider {
+    width: auto;
+    height: auto;
+    border: 2px rgb(101, 93, 93) solid;
+}
