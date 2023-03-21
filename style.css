@@ -5,6 +5,11 @@ body {
     background-color: #f5f5dc;
 }
 
+main {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -58,13 +63,9 @@ header {
     background-color: #FFBD3A;
     border-radius: 14px;
     font-size: large;
-    font-family: 'Lucida Sans',
-        'Lucida Sans Regular',
-        'Lucida Grande',
-        'Lucida Sans Unicode',
-        Geneva,
-        Verdana,
-        sans-serif;
+    font-family: 'Lucida Sans';
+    width: 200px;
+    height: 50px;
 
 
 }
@@ -89,8 +90,8 @@ header {
     footer,
     header {
         text-align: center;
-        left: 10%;
-        width: 80%;
+        /* left: 10%; */
+        width: 100%;
     }
 
 
