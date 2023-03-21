@@ -75,6 +75,11 @@ header {
     margin: auto;
 }
 
+.cheersPic {
+    display: flex;
+    margin: auto;
+}
+
 .endOfQuizz {
     text-align: center;
 }
