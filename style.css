@@ -5,7 +5,7 @@
     gap: 20px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "Question-N°1 Question-N°1 Question-N°1"
+        "Question-1 Question-1 Question-1"
         ". Réponse-1 ."
         ". Réponse-2 ."
         ". Réponse-3 ."
@@ -13,10 +13,9 @@
         ". Bouton-Valider .";
 }
 
-.Question-N°1 {
-    justify-self: center;
+.Question-1 {
     align-self: center;
-    grid-area: Question-N°1;
+    grid-area: Question-1;
     background-color: rgb(192, 47, 47);
 }
 
@@ -44,7 +43,7 @@
     background-color: crimson;
 }
 
-.Bouton-Valider {
+.Bouton-Valider, .Valider {
     justify-self: center;
     align-self: center;
     grid-area: Bouton-Valider;
@@ -52,7 +51,7 @@
 
 }
 
-.Question-N°1,
+.Question-1,
 .Réponse-1,
 .Réponse-2,
 .Réponse-3,
