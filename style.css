@@ -90,7 +90,6 @@ footer {
     position: fixed;
     display: flex;
     flex-direction: column;
-    gap: 0px;
     bottom: 0;
     background-color: #fab005;
     border-top-left-radius: 10px;
@@ -200,7 +199,6 @@ button{
     footer,
     header {
         text-align: center;
-        /* left: 10%; */
         width: 100%;
     }
 

@@ -1,95 +1,113 @@
+//Base de données questions
+
 const questionnaire = [
     {
         question: "Qui joue au jeu en ligne de manière active?",
-        reponse: ["Alex", "Delphine", "Waheb", "D la réponse D"],
-        correct: null
+        reponse: ["Alex", "Delphine", "Waheb", "Avec un accent québécois : D la réponse D"],
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui est surnommé le dormeur ?",
-        reponse: ["Cathy", "42", "Thomas D", "Nils"],
-        correct: null
+        reponse: ["Cathy", "42", "François le Francais", "Nils"],
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui est la personne qui nous fait le plus rire ?",
         reponse: ["Pierre Palmade", "Thomas V", "Laëtitia", "Fabien"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui à vécu aux États Unis ?",
         reponse: ["Amaury", "Wilhem", "Nicolas", "Nils"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui fait du sport pour décompresser ?",
         reponse: ["Julien", "Laëtitia", "Du sport ??? Connais pas", "Cathy"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui pourrait être le deuxième formateur ?",
-        reponse: ["Delphine", "Chat GPT", "Waheb", "Lorem ipsum dolor sit amet,…"],
-        correct: null
+        reponse: ["Delphine", "Chat GPT", "Waheb", "Thomas V"],
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui vient en train à la formation ?",
-        reponse: ["Thomas D", "Nicolas", "Fabien", "Amaury"],
-        correct: null
+        reponse: ["Thomas D", "Nicolas", "Fabien", "49-3"],
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui a une voiture électrique ?",
         reponse: ["Waheb", "Julien", "Donald Trump", "Nils"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui voit son prénom toujours écorché le Vendredi ?",
         reponse: ["Nicolas", "Cathy", "Waheb", "Lorem ipsum dolor sit amet,…"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui s’est auto proclamé master du barbecue ?",
         reponse: ["Laëtitia", "Greta Thunberg", "Thomas D", "Amaury"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui à des bugs réguliers sur son PC, sauf quand elle devrait en avoir ??",
         reponse: ["Cathy", "C’est techniquement impossible", "Wilhem", "Waheb"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui à un fond d’écran meet avec un chien en danger ?",
         reponse: ["Brigitte Bardot", "Nicolas", "Thomas V", "Julien"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "Qui fait ces quêtes plus vite que son ombre ?",
         reponse: ["Nils", "Wilhem", "Lucky Luke", "Laëtitia"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
-        question: "Qui est en mode relache le Vendredi ?",
+        question: "Qui est en mode relâche le Vendredi ?",
         reponse: ["Cathy – Delphine – Fabien – Thomas V", "Alex – Thomas D – Wilhem – Julien – Nicolas", "Nils – Amaury – Laëticia – Waheb", "Réponse A – Réponse B – Réponse C et donc Réponse D"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 
     {
         question: "SOS !!!",
         reponse: ["Nicolas Wormser", "Nicolas Wormser", "Nicolas Wormser", "Nicolas Wormser"],
-        correct: null
+        correct: null,
+        userReponse: null
     },
 ]
 
+//Bonnes réponses
 questionnaire[0].correct = questionnaire[0].reponse[0]
 questionnaire[1].correct = questionnaire[1].reponse[2]
 questionnaire[2].correct = questionnaire[2].reponse[1]
@@ -106,19 +124,19 @@ questionnaire[12].correct = questionnaire[12].reponse[1]
 questionnaire[13].correct = questionnaire[13].reponse[3]
 questionnaire[14].correct = (questionnaire[14].reponse[0])||(questionnaire[14].reponse[1])||(questionnaire[14].reponse[2])||(questionnaire[14].reponse[3])
 
-
-console.log(questionnaire[0].correct)
-console.log(questionnaire[1].correct)
-console.log(questionnaire[2].correct)
-console.log(questionnaire[3].correct)
-console.log(questionnaire[4].correct)
-console.log(questionnaire[5].correct)
-console.log(questionnaire[6].correct)
-console.log(questionnaire[7].correct)
-console.log(questionnaire[8].correct)
-console.log(questionnaire[9].correct)
-console.log(questionnaire[10].correct)
-console.log(questionnaire[11].correct)
-console.log(questionnaire[12].correct)
-console.log(questionnaire[13].correct)
-console.log(questionnaire[14].correct)
+//Réponses utlisateurs
+// questionnaire[0].userReponse = 
+// questionnaire[1].userReponse = 
+// questionnaire[2].userReponse = 
+// questionnaire[3].userReponse = 
+// questionnaire[4].userReponse = 
+// questionnaire[5].userReponse = 
+// questionnaire[6].userReponse = 
+// questionnaire[7].userReponse = 
+// questionnaire[8].userReponse = 
+// questionnaire[9].userReponse = 
+// questionnaire[10].userReponse = 
+// questionnaire[11].userReponse = 
+// questionnaire[12].userReponse = 
+// questionnaire[13].userReponse = 
+// questionnaire[14].userReponse = 
