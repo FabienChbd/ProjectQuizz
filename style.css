@@ -171,6 +171,7 @@ header {
         height: 50px;
     }
 
+
     .next {
         background-color: #FFBD3A;
         border-radius: 14px;
@@ -192,5 +193,33 @@ header {
         justify-content: center;
         gap: 20px;
     }
+}
 
+.div-logo{
+    background-image :url("logoquiz.png");
+    background-repeat : no-repeat;
+    background-position: center;
+    width: 900px;
+    height: 800px;
+    padding: 50px;
+    margin:auto;
+}
+
+  h1{
+    text-align :center ;
+    font-weight: bolder;
+    font-family: sans-serif;
+  }
+
+button{
+    width:350px;
+    padding : 40px;
+    border-radius :20px;
+    box-shadow:6px 6px 0px;
+    border-style:solid;
+    position: center;
+    font-size:25px;
+    display :block;
+    margin:auto;
+    background-color: yellow;
 }

@@ -17,3 +17,17 @@ questionnaire[1].correct = questionnaire[1].reponse[2]
 
 console.log(questionnaire[0].correct)
 console.log(questionnaire[1].correct)
+
+function greet (name){
+    return `Bonjour ${name}`
+}
+
+console.log (greet ("Alex"))
+console.log (greet ("Julien"))
+console.log (greet ("Wilhem"))
+console.log (greet ("Waheb"))
+console.log (greet ("Nicolas"))
+console.log (greet ("Laëtitia"))
+console.log (greet ("Nills"))
+console.log (greet ("Amaury"))
+console.log (greet ("Thomas"))
