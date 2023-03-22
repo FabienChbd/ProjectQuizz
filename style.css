@@ -77,8 +77,123 @@
             "reponse-3 reponse-4"
             "valider valider";
     }
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer,
+    header {
+        text-align: center;
+        /* left: 10%; */
+        width: 100%;
+    }
+
+
+    .buttonNext {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+        height: 50px;
+
+
+    }
+
+    .next {
+        background-color: #FFBD3A;
+        border-radius: 14px;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 200px;
+        height: 50px;
+    }
+
 }
 
-/*
-box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-*/
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    background-color: #f5f5dc;
+}
+
+main {
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #c8ad7f;
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8em;
+
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    bottom: 0;
+    background-color: #fab005;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 0.6em
+}
+
+.copyright {
+    margin: 2px
+}
+
+footer,
+header {
+    text-align: center;
+    width: 100%;
+    font-family: 'Permanent Marker', arial, "sans serif";
+    font-weight: lighter;
+}
+
+.answerPage {
+    text-align: center;
+}
+
+.buttonNext {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 50px;
+
+
+}
+
+.next {
+
+    background-color: #FFBD3A;
+    border-radius: 14px;
+    font-size: large;
+    font-family: 'Lucida Sans';
+    width: 200px;
+    height: 50px;
+
+
+}
+
+.bear {
+    display: flex;
+    margin: auto;
+}
+
+.cheersPic {
+    display: flex;
+    margin: auto;
+}
+
+.endOfQuizz {
+    text-align: center;
+}
