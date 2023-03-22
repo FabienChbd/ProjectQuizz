@@ -1,4 +1,3 @@
-
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -62,52 +61,6 @@
     height: auto;
     border: 2px rgb(101, 93, 93) solid;
 }
-/* au passage en vue Desktop l'affichage grid change*/
-@media (min-width: 600px) { 
-    .container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 20px 20px;
-        padding: 20px;
-        grid-template-areas:
-            "question-1 question-1"
-            "reponse-1 reponse-2"
-            "reponse-3 reponse-4"
-            "valider valider";
-    }
-    footer {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    footer,
-    header {
-        text-align: center;
-        /* left: 10%; */
-        width: 100%;
-    }
-
-
-    .buttonNext {
-        display: flex;
-        justify-content: space-around;
-        width: 400px;
-        height: 50px;
-
-
-    }
-
-    .next {
-        background-color: #FFBD3A;
-        border-radius: 14px;
-        font-size: large;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        width: 200px;
-        height: 50px;
-    }
-
-     }
 
 body {
     margin: 0;
@@ -163,10 +116,9 @@ header {
 .buttonNext {
     display: flex;
     justify-content: space-around;
-    width: 400px;
-    height: 50px;
-
-
+    /* width: 400px;
+    height: 70px; */
+    margin: auto;
 }
 
 .next {
@@ -175,10 +127,8 @@ header {
     border-radius: 14px;
     font-size: large;
     font-family: 'Lucida Sans';
-    width: 200px;
-    height: 50px;
-
-
+    width: 140px;
+    height: 10px;
 }
 
 .bear {
@@ -193,36 +143,82 @@ header {
 
 .endOfQuizz {
     text-align: center;
-} 
+}
 
-.div-logo{
-    background-image :url("logoquiz.png");
-    background-repeat : no-repeat;
+.div-logo {
+    background-image: url("logoquiz.png");
+    background-repeat: no-repeat;
     background-position: center;
     width: 900px;
     height: 800px;
     padding: 50px;
-    margin:auto;
+    margin: auto;
 }
 
-  h1{
-    text-align :center ;
+h1 {
+    text-align: center;
     font-weight: bolder;
     font-family: sans-serif;
-    font-size : 100px;
+}
 
-  }
-
-button{
-    width:350px;
-    padding : 40px;
-    border-radius :20px;
-    box-shadow:6px 6px 0px;
-    border-style:solid;
+button {
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px;
+    border-style: solid;
     position: center;
-    font-size:25px;
-    display :block;
-    margin:auto;
+    font-size: 25px;
+    display: block;
+    margin: auto;
     background-color: yellow;
 }
 
+/* au passage en vue Desktop l'affichage grid change*/
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 20px 20px;
+        padding: 20px;
+        grid-template-areas:
+            "question-1 question-1"
+            "reponse-1 reponse-2"
+            "reponse-3 reponse-4"
+            "valider valider";
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer,
+    header {
+        text-align: center;
+        /* left: 10%; */
+        width: 100%;
+    }
+
+
+    .buttonNext {
+        display: flex;
+        /* justify-content: space-around; */
+        margin: auto;
+
+    }
+
+    .next {
+        background-color: #FFBD3A;
+        border-radius: 14px;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 200px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
