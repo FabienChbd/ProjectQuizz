@@ -1,3 +1,4 @@
+
 const questionnaire = [
     {
         question: "Qui joue au jeu en ligne de manière active?",
@@ -31,3 +32,4 @@ console.log (greet ("Laëtitia"))
 console.log (greet ("Nills"))
 console.log (greet ("Amaury"))
 console.log (greet ("Thomas"))
+

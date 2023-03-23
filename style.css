@@ -1,3 +1,4 @@
+
 header {
     position: fixed;
     top: 0;
@@ -32,7 +33,8 @@ main {
     display: flex;
     justify-content: space-around;
     width: 400px;
-    height: 50px;
+    height: 90px;
+    margin:auto;
 }
 
 .next {
@@ -41,8 +43,9 @@ main {
     font-size: large;
     font-family: 'Lucida Sans';
     width: 200px;
-    height: 50px;
+    //height: 50px;
 }
+
 
 .bear {
     display: flex;
@@ -57,6 +60,7 @@ main {
 .endOfQuizz {
     text-align: center;
 }
+
 
 .container {
     display: grid;
@@ -126,9 +130,10 @@ main {
     align-self: center;
     /*width: auto;
     height: auto;*/
-    border: 2px rgb(101, 93, 93) solid;
+    border: 2px rgb(101, 93, 93) solid;}
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 footer {
@@ -151,6 +156,7 @@ header {
     font-weight: lighter;
 }
 
+/* au passage en vue Desktop l'affichage grid change*/
 @media (min-width: 600px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -163,15 +169,16 @@ header {
             "reponse-3 reponse-3 reponse-4 reponse-4"
             ". valider valider .";
     }
-
+     
+    
     .buttonNext {
         display: flex;
         justify-content: space-around;
-        width: 400px;
-        height: 50px;
+      //  width: 400px;
+      //  height: 50px;
+      margin auto
     }
-
-
+     
     .next {
         background-color: #FFBD3A;
         border-radius: 14px;
@@ -181,45 +188,58 @@ header {
         height: 50px;
     }
 
+.endOfQuizz {
+    text-align: center;
+}
+    
+    
     footer,
     header {
         text-align: center;
         /* left: 10%; */
         width: 100%;
     }
+    
+ 
 
     footer {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
-}
+
+
+
+
 
 .div-logo{
     background-image :url("logoquiz.png");
     background-repeat : no-repeat;
+
     background-position: center;
     width: 900px;
     height: 800px;
     padding: 50px;
-    margin:auto;
+    margin: auto;
 }
 
-  h1{
-    text-align :center ;
+h1 {
+    text-align: center;
     font-weight: bolder;
     font-family: sans-serif;
-  }
+}
 
-button{
-    width:350px;
-    padding : 40px;
-    border-radius :20px;
-    box-shadow:6px 6px 0px;
-    border-style:solid;
+button {
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px;
+    border-style: solid;
     position: center;
-    font-size:25px;
-    display :block;
-    margin:auto;
-    background-color: yellow;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    background-color: yellow;}
+
+
 }
