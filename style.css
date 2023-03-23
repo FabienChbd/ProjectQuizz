@@ -102,7 +102,7 @@ main {
     font-size: large;
     font-family: 'Lucida Sans';
     width: 200px;
-    //height: 50px;
+    height: 50px;
 }
 
 
@@ -215,10 +215,8 @@ header {
     font-weight: lighter;
 }
 
-
-=======
 /* au passage en vue Desktop l'affichage grid change*/
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -238,7 +236,7 @@ header {
         justify-content: space-around;
         width: 400px;
         height: 50px;
-        margin auto
+        margin : auto
     }
      
     .next {
@@ -250,9 +248,9 @@ header {
         height: 50px;
     }
 
-.endOfQuizz {
-    text-align: center;
-}
+    .endOfQuizz {
+        text-align: center;
+    }
     
     
     footer,
@@ -298,4 +296,5 @@ button {
     display :block;
     margin:auto;
     background-color: yellow;
-}
+
+}}
