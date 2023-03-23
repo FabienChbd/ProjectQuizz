@@ -90,7 +90,7 @@ main {
     justify-content: space-around;
     width: 400px;
     height: 90px;
-    margin:auto;
+    margin: auto;
 }
 
 .next {
@@ -255,8 +255,8 @@ button {
             ". valider valider .";
     }
 
-     
-    
+
+
     .buttonNext {
         display: flex;
         justify-content: space-around;
@@ -264,7 +264,7 @@ button {
         height: 50px;
         margin : auto
     }
-     
+
     .next {
         background-color: #FFBD3A;
         border-radius: 14px;
@@ -277,20 +277,18 @@ button {
     .endOfQuizz {
         text-align: center;
     }
-    
-    
+
     footer,
     header {
         text-align: center;
         width: 100%;
     }
-    
- 
+
+
 
     footer {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
-        
     }
