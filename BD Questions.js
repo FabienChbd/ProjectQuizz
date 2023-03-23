@@ -141,50 +141,40 @@ questionnaire[14].correct = (questionnaire[14].reponse[0])||(questionnaire[14].r
 // questionnaire[13].userReponse = 
 // questionnaire[14].userReponse = 
 
-const questionnaire = [
-    {
-        question: "Qui joue au jeu en ligne de manière active?",
-        reponse: ["Alex", "Delphine", "Waheb", "Avec un accent québécois : D la réponse D"],
-        correct: null,
-        userReponse: null
-    },
-
-    // Les autres questions...
-];
 
 //Implantation dans le HTML
-const questionnaireDiv = document.getElementById("questions");
+// const questionnaireDiv = document.getElementById("questions");
 
-for (let i = 0; i < questionnaire.length; i++) {
-    const question = questionnaire[i];
+// for (let i = 0; i < questionnaire.length; i++) {
+//     const question = questionnaire[i];
 
-    // Créer un élément de question contenant le texte de la question
-    const questionDiv = document.createElement("div");
-    questionDiv.textContent = question.question;
+//     // Créer un élément de question contenant le texte de la question
+//     const questionDiv = document.createElement("div");
+//     questionDiv.textContent = question.question;
 
-    // Ajouter un attribut data-index avec la valeur de l'index de la question
-    questionDiv.setAttribute("data-index", i);
+//     // Ajouter un attribut data-index avec la valeur de l'index de la question
+//     questionDiv.setAttribute("data-index", i);
 
-    // Ajouter l'élément de question au conteneur de questions
-    questionnaireDiv.appendChild(questionDiv);
+//     // Ajouter l'élément de question au conteneur de questions
+//     questionnaireDiv.appendChild(questionDiv);
 
-    // Boucle à travers les réponses et créer un élément de réponse pour chacune
-    for (let j = 0; j < question.reponse.length; j++) {
-        const reponse = question.reponse[j];
+//     // Boucle à travers les réponses et créer un élément de réponse pour chacune
+//     for (let j = 0; j < question.reponse.length; j++) {
+//         const reponse = question.reponse[j];
 
-        // Créer un élément de réponse contenant le texte de la réponse
-        const reponseDiv = document.createElement("div");
-        reponseDiv.textContent = reponse;
+//         // Créer un élément de réponse contenant le texte de la réponse
+//         const reponseDiv = document.createElement("div");
+//         reponseDiv.textContent = reponse;
 
-        // Ajouter un attribut data-index avec la valeur de l'index de la question et de la réponse
-        reponseDiv.setAttribute("data-index", i + "-" + j);
+//         // Ajouter un attribut data-index avec la valeur de l'index de la question et de la réponse
+//         reponseDiv.setAttribute("data-index", i + "-" + j);
 
-        // Ajouter un gestionnaire d'événement de clic pour stocker la réponse choisie par l'utilisateur
-        reponseDiv.addEventListener("click", function() {
-            question.userReponse = j;
-        });
+//         // Ajouter un gestionnaire d'événement de clic pour stocker la réponse choisie par l'utilisateur
+//         reponseDiv.addEventListener("click", function() {
+//             question.userReponse = j;
+//         });
 
-        // Ajouter l'élément de réponse au conteneur de questions
-        questionsDiv.appendChild(reponseDiv);
-    }
-}
+//         // Ajouter l'élément de réponse au conteneur de questions
+//         questionsDiv.appendChild(reponseDiv);
+//     }
+// }
