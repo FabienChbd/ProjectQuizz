@@ -115,10 +115,11 @@ header {
 
 .buttonNext {
     display: flex;
-    justify-content: space-around;
-    /* width: 400px;
-    height: 70px; */
+    /* justify-content: space-around; */
+    width: 400px;
+    height: 90px;
     margin: auto;
+
 }
 
 .next {
@@ -127,8 +128,8 @@ header {
     border-radius: 14px;
     font-size: large;
     font-family: 'Lucida Sans';
-    width: 140px;
-    height: 10px;
+    width: 250px;
+    background-color: coral;
 }
 
 .bear {
