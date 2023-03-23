@@ -1,65 +1,12 @@
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "question-1 question-1 question-1"
-        ". reponse-1 ."
-        ". reponse-2 ."
-        ". reponse-3 ."
-        ". reponse-4 ."
-        ". valider .";
-}
 
-.question-1 {
-    align-self: center;
-    grid-area: question-1;
-    background-color: rgb(192, 47, 47);
-}
-
-.reponse-1 {
-    align-self: center;
-    grid-area: reponse-1;
-    background-color: rgb(30, 30, 198);
-}
-
-.reponse-2 {
-    align-self: center;
-    grid-area: reponse-2;
-    background-color: blueviolet;
-}
-
-.reponse-3 {
-    align-self: center;
-    grid-area: reponse-3;
-    background-color: rgb(31, 192, 96);
-}
-
-.reponse-4 {
-    align-self: center;
-    grid-area: reponse-4;
-    background-color: crimson;
-}
-
-.valider {
-    justify-self: center;
-    align-self: center;
-    grid-area: valider;
-    background-color: coral;
-
-}
-
-.question-1,
-.reponse-1,
-.reponse-2,
-.reponse-3,
-.reponse-4,
-.valider {
-    width: auto;
-    height: auto;
-    border: 2px rgb(101, 93, 93) solid;
+header {
+    position: fixed;
+    top: 0;
+    background-color: #c8ad7f;
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.2em;
 }
 
 body {
@@ -70,43 +17,12 @@ body {
 }
 
 main {
-    margin-top: 90px;
+    margin-top: 120px;
     margin-bottom: 50px;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    background-color: #c8ad7f;
-    margin: auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-size: 0.8em;
-
-}
-
-footer {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    bottom: 0;
-    background-color: #fab005;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    font-size: 0.6em
 }
 
 .copyright {
     margin: 2px
-}
-
-footer,
-header {
-    text-align: center;
-    width: 100%;
-    font-family: 'Permanent Marker', arial, "sans serif";
-    font-weight: lighter;
 }
 
 .answerPage {
@@ -115,22 +31,21 @@ header {
 
 .buttonNext {
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     width: 400px;
     height: 90px;
-    margin: auto;
-
+    margin:auto;
 }
 
 .next {
-
     background-color: #FFBD3A;
     border-radius: 14px;
     font-size: large;
     font-family: 'Lucida Sans';
-    width: 250px;
-    background-color: coral;
+    width: 200px;
+    //height: 50px;
 }
+
 
 .bear {
     display: flex;
@@ -146,9 +61,161 @@ header {
     text-align: center;
 }
 
-.div-logo {
-    background-image: url("logoquiz.png");
-    background-repeat: no-repeat;
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "question question question"
+        ". reponse-1 ."
+        ". reponse-2 ."
+        ". reponse-3 ."
+        ". reponse-4 ."
+        ". valider .";
+}
+
+.question {
+    grid-area: question;
+    background-color: #fa5252;
+}
+
+.reponse-1 {
+    grid-area: reponse-1;
+    background-color: #228be6;
+}
+
+.reponse-2 {
+    grid-area: reponse-2;
+    background-color: #7950f2;
+}
+
+.reponse-3 {
+    grid-area: reponse-3;
+    background-color: #12b886;
+}
+
+.reponse-4 {
+    grid-area: reponse-4;
+    background-color: #e64980;
+}
+
+.valider {
+    grid-area: valider;
+    background-color: #ffc45e;
+}
+
+.valider:hover {
+    background-color: coral;
+}
+
+.valider:active {
+    background-color: green;
+}
+
+.question,
+.reponse-1,
+.reponse-2,
+.reponse-3,
+.reponse-4,
+.valider {
+    display: flex;
+    /* afficher les éléments comme une boîte flexible */
+    justify-content: center;
+    /* centrer le contenu horizontalement */
+    align-items: center;
+    /* centrer le contenu verticalement */
+    align-self: center;
+    /*width: auto;
+    height: auto;*/
+    border: 2px rgb(101, 93, 93) solid;}
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    bottom: 0;
+    background-color: #fab005;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 0.8em
+}
+
+footer,
+header {
+    text-align: center;
+    width: 100%;
+    font-family: 'Permanent Marker', arial, "sans serif";
+    font-weight: lighter;
+}
+
+/* au passage en vue Desktop l'affichage grid change*/
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 60px 20px;
+        padding: 20px;
+        grid-template-areas:
+            "question question question question"
+            "reponse-1 reponse-1 reponse-2 reponse-2"
+            "reponse-3 reponse-3 reponse-4 reponse-4"
+            ". valider valider .";
+    }
+     
+    
+    .buttonNext {
+        display: flex;
+        justify-content: space-around;
+      //  width: 400px;
+      //  height: 50px;
+      margin auto
+    }
+     
+    .next {
+        background-color: #FFBD3A;
+        border-radius: 14px;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 200px;
+        height: 50px;
+    }
+
+.endOfQuizz {
+    text-align: center;
+}
+    
+    
+    footer,
+    header {
+        text-align: center;
+        /* left: 10%; */
+        width: 100%;
+    }
+    
+ 
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+
+
+
+.div-logo{
+    background-image :url("logoquiz.png");
+    background-repeat : no-repeat;
+
     background-position: center;
     width: 900px;
     height: 800px;
@@ -172,54 +239,7 @@ button {
     font-size: 25px;
     display: block;
     margin: auto;
-    background-color: yellow;
-}
+    background-color: yellow;}
 
-/* au passage en vue Desktop l'affichage grid change*/
-@media (min-width: 600px) {
-    .container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 20px 20px;
-        padding: 20px;
-        grid-template-areas:
-            "question-1 question-1"
-            "reponse-1 reponse-2"
-            "reponse-3 reponse-4"
-            "valider valider";
-    }
-
-    footer {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    footer,
-    header {
-        text-align: center;
-        /* left: 10%; */
-        width: 100%;
-    }
-
-
-    .buttonNext {
-        display: flex;
-        /* justify-content: space-around; */
-        margin: auto;
-
-    }
-
-    .next {
-        background-color: #FFBD3A;
-        border-radius: 14px;
-        font-size: large;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        width: 200px;
-        height: 50px;
-        justify-content: center;
-        align-items: center;
-
-    }
 
 }
