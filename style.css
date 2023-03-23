@@ -292,3 +292,16 @@ button {
         gap: 20px;
     }
     }
+
++/*
+.div-logo{
++    background-image :url("logoquiz.png");
++    background-repeat : no-repeat;
++    background-position: center;
++    width: 1100px;
++    height: 1100px;
++    padding: 90px;
++    margin:auto;
++    border-radius :200px;
++}
+*/
