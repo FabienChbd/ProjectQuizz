@@ -1,12 +1,3 @@
-header {
-    position: fixed;
-    top: 0;
-    background-color: #c8ad7f;
-    margin: auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
 .titre {
     font-size : 2em;
 }
@@ -14,6 +5,7 @@ header {
 body {
     padding-top: 60px;
     padding-bottom : 60px;
+    margin : 0;
     font-size: 1em;
     background-color: #f5f5dc;
 }
@@ -21,6 +13,8 @@ body {
 main {
     margin-top: 120px;
     margin-bottom: 50px;
+    width: 90%;
+    margin : auto;
 }
 
 .copyright {
@@ -65,7 +59,6 @@ header {
     position: fixed;
     top: 0;
     background-color: #c8ad7f;
-    margin: auto;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 1.2em;
@@ -122,8 +115,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px 0px;
     grid-auto-flow: row;
+    gap: 20px 20px;
     grid-template-areas:
         "question question question"
         ". reponse-1 ."
@@ -176,20 +169,13 @@ main {
 .reponse-2,
 .reponse-3,
 .reponse-4,
-.valider {
+.valider { 
     display: flex;
-    /* afficher les éléments comme une boîte flexible */
     justify-content: center;
-    /* centrer le contenu horizontalement */
     align-items: center;
-    /* centrer le contenu verticalement */
-    align-self: center;
-    /*width: auto;
-    height: auto;*/
     border: 2px rgb(101, 93, 93) solid;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 }
 
 footer {
@@ -223,8 +209,12 @@ h1 {
     text-align: center;
     font-weight: bolder;
     font-family: sans-serif;
-    font-size : 100px;
+    font-size : 40px;
+}
 
+.hello {
+    font-size : 2em;
+    text-align: center;
 }
 
 button {
@@ -238,8 +228,7 @@ button {
     display :block;
     margin:auto;
     background-color: yellow;
-    
-}
+    }
 
 /* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
@@ -247,15 +236,12 @@ button {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 60px 20px;
-        padding: 20px;
         grid-template-areas:
             "question question question question"
             "reponse-1 reponse-1 reponse-2 reponse-2"
             "reponse-3 reponse-3 reponse-4 reponse-4"
             ". valider valider .";
     }
-
-
 
     .buttonNext {
         display: flex;
@@ -277,15 +263,7 @@ button {
     .endOfQuizz {
         text-align: center;
     }
-
-    footer,
-    header {
-        text-align: center;
-        width: 100%;
-    }
-
-
-
+  
     footer {
         flex-direction: row;
         justify-content: center;
