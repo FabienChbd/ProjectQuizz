@@ -143,21 +143,15 @@ questionnaire[14].correct = (questionnaire[14].reponse[0])||(questionnaire[14].r
 
 
 //Implantation dans le HTML
-for (i=0;i<questionnaire.length;i++){
-const question = document.querySelector('.question')
+for (let i=0;i<questionnaire.length;i++){
+const question = document.querySelector('.quest')
 question.innerHTML= questionnaire[i].question
-const reponse1 = document.querySelector('.reponse-1')
+const reponse1 = document.querySelector('.R1')
 reponse1.innerHTML= questionnaire[i].reponse[0]
-const reponse2 = document.querySelector('.reponse-2')
+const reponse2 = document.querySelector('.R2')
 reponse2.innerHTML= questionnaire[i].reponse[1]
-const reponse3 = document.querySelector('.reponse-3')
+const reponse3 = document.querySelector('.R3')
 reponse3.innerHTML= questionnaire[i].reponse[2]
-const reponse4 = document.querySelector('.reponse-4')
+const reponse4 = document.querySelector('.R4')
 reponse4.innerHTML= questionnaire[i].reponse[3]
-const validation = document.querySelector('.valider')
-if (i=14){
-    validation.innerHTML = "Prêt à rencontrer l'ours ?"
 }
-else {
-    validation.innerHTML = "Sûr de votre réponse ?"
-}}

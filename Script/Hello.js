@@ -1,6 +1,3 @@
-function greet() {
     let pseudo = prompt("C'est quoi ton blaze")
-    return `Salut ${pseudo}`
-}
-
-console.log (greet())
+    const greet = document.querySelector('.hello')
+    greet.innerHTML = `Hello ${pseudo} !!!`
