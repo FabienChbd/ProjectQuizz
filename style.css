@@ -170,7 +170,7 @@ main {
 .reponse-2,
 .reponse-3,
 .reponse-4,
-.valider {
+.valider { 
     display: flex;
     /* afficher les éléments comme une boîte flexible */
     justify-content: center;
