@@ -17,6 +17,9 @@ main {
     margin : auto;
 }
 
+a {
+    text-decoration : none;
+}
 .copyright {
     margin: 2px
 }

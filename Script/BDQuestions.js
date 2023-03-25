@@ -107,6 +107,20 @@ const questionnaire = [
     },
 ]
 
+//Implantation dans le HTML
+for (let i=0;i<questionnaire.length;i++){
+    const question = document.querySelector('.quest')
+    question.innerText= questionnaire[i].question
+    const reponse1 = document.querySelector('.R1')
+    reponse1.innerText= questionnaire[i].reponse[0]
+    const reponse2 = document.querySelector('.R2')
+    reponse2.innerText= questionnaire[i].reponse[1]
+    const reponse3 = document.querySelector('.R3')
+    reponse3.innerText= questionnaire[i].reponse[2]
+    const reponse4 = document.querySelector('.R4')
+    reponse4.innerText= questionnaire[i].reponse[3]
+    }
+
 //Bonnes réponses
 questionnaire[0].correct = questionnaire[0].reponse[0]
 questionnaire[1].correct = questionnaire[1].reponse[2]
@@ -141,17 +155,21 @@ questionnaire[14].correct = (questionnaire[14].reponse[0])||(questionnaire[14].r
 // questionnaire[13].userReponse = 
 // questionnaire[14].userReponse = 
 
-
-//Implantation dans le HTML
-for (let i=0;i<questionnaire.length;i++){
-const question = document.querySelector('.quest')
-question.innerText= questionnaire[i].question
-const reponse1 = document.querySelector('.R1')
-reponse1.innerText= questionnaire[i].reponse[0]
-const reponse2 = document.querySelector('.R2')
-reponse2.innerText= questionnaire[i].reponse[1]
-const reponse3 = document.querySelector('.R3')
-reponse3.innerText= questionnaire[i].reponse[2]
-const reponse4 = document.querySelector('.R4')
-reponse4.innerText= questionnaire[i].reponse[3]
+function comptageBeer(questionnaire) {
+    let scoreBeer = 0;
+    let scoreCookie = 0;
+    for (let i = 0; i < questionnaire.length; i++) {
+      if (i < questionnaire.length -1) {
+        if (questionnaire[i].userReponse === questionnaire[i].correct) {
+          scoreBeer++;
+        }
+      } else {
+        if (questionnaire[i].userReponse === questionnaire[i].correct) {
+          scoreCookie++;
+        }
+      }
+      return scoreBeer
+      return scoreCookie
+    }
 }
+export {scoreBeer, scoreCookie}
