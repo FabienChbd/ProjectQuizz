@@ -144,6 +144,15 @@ questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14]
 cont userAnswer = document.createElement("div");
 userAnswer.innertext =
 
+// Faire une boucle avec addEventListener, qui lorsque l'on clique sur une des réponse :
+// Stock le résultat dans une variable que l'on compare aux bonnes réponse
+
+const reponseQuestion = document.querySelector("#R1, #R2, #R3, #R4");
+
+document.body.addEventListener("click", function (event) {
+    reponseQuestion.innerHTML = userReponse
+})
+
 //Implantation dans le HTML
 // const questionnaireDiv = document.getElementById("questions");
 
