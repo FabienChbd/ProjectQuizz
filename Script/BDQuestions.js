@@ -107,6 +107,7 @@ const questionnaire = [
     },
 ]
 
+
 //Implantation dans le HTML
 for (let i=0;i<questionnaire.length;i++){
     const question = document.querySelector('.quest')
@@ -120,6 +121,7 @@ for (let i=0;i<questionnaire.length;i++){
     const reponse4 = document.querySelector('.R4')
     reponse4.innerText= questionnaire[i].reponse[3]
     }
+
 
 //Bonnes réponses
 questionnaire[0].correct = questionnaire[0].reponse[0]
@@ -136,29 +138,50 @@ questionnaire[10].correct = questionnaire[10].reponse[0]
 questionnaire[11].correct = questionnaire[11].reponse[1]
 questionnaire[12].correct = questionnaire[12].reponse[1]
 questionnaire[13].correct = questionnaire[13].reponse[3]
-questionnaire[14].correct = (questionnaire[14].reponse[0])||(questionnaire[14].reponse[1])||(questionnaire[14].reponse[2])||(questionnaire[14].reponse[3])
+questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
+
+
+
+const reponsesQuestion = document.querySelectorAll(".R1, .R2, .R3, .R4"); // les class css
+//Ensuite on veut récupérer le click sur une R1 ou R1 ou ... et le stocker dans une variable qui la comparera à la bonne réponse
+reponsesQuestion.forEach(response => {
+    response.addEventListener("click", function (event) {
+        console.log(response.dataset.response) // data-response sur le <p>
+        response.dataset.response = questionnaire[i].reponsesQuestion
+    })
+})
+console.log(reponsesQuestion)
+//questionnaire[i].reponsesQuestion = userReponse // pas reponsesQuestion.inner
 
 //Réponses utlisateurs
-// questionnaire[0].userReponse = 
-// questionnaire[1].userReponse = 
-// questionnaire[2].userReponse = 
-// questionnaire[3].userReponse = 
-// questionnaire[4].userReponse = 
-// questionnaire[5].userReponse = 
-// questionnaire[6].userReponse = 
-// questionnaire[7].userReponse = 
-// questionnaire[8].userReponse = 
-// questionnaire[9].userReponse = 
-// questionnaire[10].userReponse = 
-// questionnaire[11].userReponse = 
-// questionnaire[12].userReponse = 
-// questionnaire[13].userReponse = 
-// questionnaire[14].userReponse = 
+// questionnaire[0].reponsesQuestion = 
+// questionnaire[1].reponsesQuestion = 
+// questionnaire[2].reponsesQuestion = 
+// questionnaire[3].reponsesQuestion = 
+// questionnaire[4].reponsesQuestion = 
+// questionnaire[5].reponsesQuestion = 
+// questionnaire[6].reponsesQuestion = 
+// questionnaire[7].reponsesQuestion = 
+// questionnaire[8].reponsesQuestion = 
+// questionnaire[9].reponsesQuestion = 
+// questionnaire[10].reponsesQuestion = 
+// questionnaire[11].reponsesQuestion = 
+// questionnaire[12].reponsesQuestion = 
+// questionnaire[13].reponsesQuestion = 
+// questionnaire[14].reponsesQuestion = 
+
+//cont userAnswer = document.createElement("div");
+//userAnswer.innertext =
+
+// Faire une boucle avec addEventListener, qui lorsque l'on clique sur une des réponse :
+// Stock le résultat dans une variable que l'on compare aux bonnes réponse
+
 
 function comptageBeer(questionnaire) {
     let scoreBeer = 0;
     let scoreCookie = 0;
     for (let i = 0; i < questionnaire.length; i++) {
+
       if (i < questionnaire.length -1) {
         if (questionnaire[i].userReponse === questionnaire[i].correct) {
           scoreBeer++;
@@ -173,3 +196,4 @@ function comptageBeer(questionnaire) {
     }
 }
 // export {scoreBeer, scoreCookie}
+
