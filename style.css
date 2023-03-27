@@ -19,7 +19,13 @@ main {
     /* margin: auto;*/
 }
 
+
+/*a {
+    text-decoration : none;
+}*/
+
 /* Margin pour décoller du haut du footer */
+
 .copyright {
     margin: 2px
 }

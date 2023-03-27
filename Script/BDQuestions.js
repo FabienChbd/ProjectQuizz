@@ -107,6 +107,22 @@ const questionnaire = [
     },
 ]
 
+
+//Implantation dans le HTML
+for (let i=0;i<questionnaire.length;i++){
+    const question = document.querySelector('.quest')
+    question.innerText= questionnaire[i].question
+    const reponse1 = document.querySelector('.R1')
+    reponse1.innerText= questionnaire[i].reponse[0]
+    const reponse2 = document.querySelector('.R2')
+    reponse2.innerText= questionnaire[i].reponse[1]
+    const reponse3 = document.querySelector('.R3')
+    reponse3.innerText= questionnaire[i].reponse[2]
+    const reponse4 = document.querySelector('.R4')
+    reponse4.innerText= questionnaire[i].reponse[3]
+    }
+
+
 //Bonnes réponses
 questionnaire[0].correct = questionnaire[0].reponse[0]
 questionnaire[1].correct = questionnaire[1].reponse[2]
@@ -124,18 +140,7 @@ questionnaire[12].correct = questionnaire[12].reponse[1]
 questionnaire[13].correct = questionnaire[13].reponse[3]
 questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
 
-for (let i = 0; i < questionnaire.length; i++) {
-    const question = document.querySelector('.quest')
-    question.innerText = questionnaire[i].question
-    const reponse1 = document.querySelector('.R1')
-    reponse1.innerText = questionnaire[i].reponse[0]
-    const reponse2 = document.querySelector('.R2')
-    reponse2.innerText = questionnaire[i].reponse[1]
-    const reponse3 = document.querySelector('.R3')
-    reponse3.innerText = questionnaire[i].reponse[2]
-    const reponse4 = document.querySelector('.R4')
-    reponse4.innerText = questionnaire[i].reponse[3]
-}
+
 
 const reponsesQuestion = document.querySelectorAll(".R1, .R2, .R3, .R4"); // les class css
 //Ensuite on veut récupérer le click sur une R1 ou R1 ou ... et le stocker dans une variable qui la comparera à la bonne réponse
@@ -171,20 +176,24 @@ console.log(reponsesQuestion)
 // Faire une boucle avec addEventListener, qui lorsque l'on clique sur une des réponse :
 // Stock le résultat dans une variable que l'on compare aux bonnes réponse
 
+
 function comptageBeer(questionnaire) {
     let scoreBeer = 0;
     let scoreCookie = 0;
     for (let i = 0; i < questionnaire.length; i++) {
-        if (i < questionnaire.length - 1) {
-            if (questionnaire[i].reponsesQuestion === questionnaire[i].correct) {
-                scoreBeer++;
-            }
-        } else {
-            if (questionnaire[i].reponsesQuestion === questionnaire[i].correct) {
-                scoreCookie++;
-            }
+
+      if (i < questionnaire.length -1) {
+        if (questionnaire[i].userReponse === questionnaire[i].correct) {
+          scoreBeer++;
         }
-        return scoreBeer
-        return scoreCookie
+      } else {
+        if (questionnaire[i].userReponse === questionnaire[i].correct) {
+          scoreCookie++;
+        }
+      }
+      return scoreBeer
+      return scoreCookie
     }
 }
+// export {scoreBeer, scoreCookie}
+
