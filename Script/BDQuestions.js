@@ -124,68 +124,67 @@ questionnaire[12].correct = questionnaire[12].reponse[1]
 questionnaire[13].correct = questionnaire[13].reponse[3]
 questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
 
-//Réponses utlisateurs
-// questionnaire[0].userReponse = 
-// questionnaire[1].userReponse = 
-// questionnaire[2].userReponse = 
-// questionnaire[3].userReponse = 
-// questionnaire[4].userReponse = 
-// questionnaire[5].userReponse = 
-// questionnaire[6].userReponse = 
-// questionnaire[7].userReponse = 
-// questionnaire[8].userReponse = 
-// questionnaire[9].userReponse = 
-// questionnaire[10].userReponse = 
-// questionnaire[11].userReponse = 
-// questionnaire[12].userReponse = 
-// questionnaire[13].userReponse = 
-// questionnaire[14].userReponse = 
+for (let i = 0; i < questionnaire.length; i++) {
+    const question = document.querySelector('.quest')
+    question.innerText = questionnaire[i].question
+    const reponse1 = document.querySelector('.R1')
+    reponse1.innerText = questionnaire[i].reponse[0]
+    const reponse2 = document.querySelector('.R2')
+    reponse2.innerText = questionnaire[i].reponse[1]
+    const reponse3 = document.querySelector('.R3')
+    reponse3.innerText = questionnaire[i].reponse[2]
+    const reponse4 = document.querySelector('.R4')
+    reponse4.innerText = questionnaire[i].reponse[3]
+}
 
-cont userAnswer = document.createElement("div");
-userAnswer.innertext =
+const reponsesQuestion = document.querySelectorAll(".R1, .R2, .R3, .R4"); // les class css
+//Ensuite on veut récupérer le click sur une R1 ou R1 ou ... et le stocker dans une variable qui la comparera à la bonne réponse
+reponsesQuestion.forEach(response => {
+    response.addEventListener("click", function (event) {
+        console.log(response.dataset.response) // data-response sur le <p>
+        response.dataset.response = questionnaire[i].reponsesQuestion
+    })
+})
+console.log(reponsesQuestion)
+//questionnaire[i].reponsesQuestion = userReponse // pas reponsesQuestion.inner
+
+//Réponses utlisateurs
+// questionnaire[0].reponsesQuestion = 
+// questionnaire[1].reponsesQuestion = 
+// questionnaire[2].reponsesQuestion = 
+// questionnaire[3].reponsesQuestion = 
+// questionnaire[4].reponsesQuestion = 
+// questionnaire[5].reponsesQuestion = 
+// questionnaire[6].reponsesQuestion = 
+// questionnaire[7].reponsesQuestion = 
+// questionnaire[8].reponsesQuestion = 
+// questionnaire[9].reponsesQuestion = 
+// questionnaire[10].reponsesQuestion = 
+// questionnaire[11].reponsesQuestion = 
+// questionnaire[12].reponsesQuestion = 
+// questionnaire[13].reponsesQuestion = 
+// questionnaire[14].reponsesQuestion = 
+
+//cont userAnswer = document.createElement("div");
+//userAnswer.innertext =
 
 // Faire une boucle avec addEventListener, qui lorsque l'on clique sur une des réponse :
 // Stock le résultat dans une variable que l'on compare aux bonnes réponse
 
-const reponseQuestion = document.querySelector("#R1, #R2, #R3, #R4");
-
-document.body.addEventListener("click", function (event) {
-    reponseQuestion.innerHTML = userReponse
-})
-
-//Implantation dans le HTML
-// const questionnaireDiv = document.getElementById("questions");
-
-// for (let i = 0; i < questionnaire.length; i++) {
-//     const question = questionnaire[i];
-
-//     // Créer un élément de question contenant le texte de la question
-//     const questionDiv = document.createElement("div");
-//     questionDiv.textContent = question.question;
-
-//     // Ajouter un attribut data-index avec la valeur de l'index de la question
-//     questionDiv.setAttribute("data-index", i);
-
-//     // Ajouter l'élément de question au conteneur de questions
-//     questionnaireDiv.appendChild(questionDiv);
-
-//     // Boucle à travers les réponses et créer un élément de réponse pour chacune
-//     for (let j = 0; j < question.reponse.length; j++) {
-//         const reponse = question.reponse[j];
-
-//         // Créer un élément de réponse contenant le texte de la réponse
-//         const reponseDiv = document.createElement("div");
-//         reponseDiv.textContent = reponse;
-
-//         // Ajouter un attribut data-index avec la valeur de l'index de la question et de la réponse
-//         reponseDiv.setAttribute("data-index", i + "-" + j);
-
-//         // Ajouter un gestionnaire d'événement de clic pour stocker la réponse choisie par l'utilisateur
-//         reponseDiv.addEventListener("click", function() {
-//             question.userReponse = j;
-//         });
-
-//         // Ajouter l'élément de réponse au conteneur de questions
-//         questionsDiv.appendChild(reponseDiv);
-//     }
-// }
+function comptageBeer(questionnaire) {
+    let scoreBeer = 0;
+    let scoreCookie = 0;
+    for (let i = 0; i < questionnaire.length; i++) {
+        if (i < questionnaire.length - 1) {
+            if (questionnaire[i].reponsesQuestion === questionnaire[i].correct) {
+                scoreBeer++;
+            }
+        } else {
+            if (questionnaire[i].reponsesQuestion === questionnaire[i].correct) {
+                scoreCookie++;
+            }
+        }
+        return scoreBeer
+        return scoreCookie
+    }
+}
