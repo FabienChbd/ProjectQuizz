@@ -20,21 +20,29 @@
         <h1 class="endOfQuizz">Fin du Quizz</h1>
 
 
-        <a href="https://www.flaticon.com"><img class="cheersPic" src="assets/cheers.png " width="200"
-                alt="icones de chopes de bieres trinquant"></a>
 
+        <div class="displayPseudo">pseudo</div>
+        <p class="scoreSentence">
+            ton score est de:
+        </p>
+        <div class="finalScore">x</div><br><br>
 
-
+        <div><img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere"></div>
         <!-- if score <5
-        tu ne connais pas assez ta promo, l'ours est assoiffe et a envie de te devorer
+        tu ne connais pas assez ta promo, l'ours est assoiffe et a envie de te devorer-->
 
-    if score =5 tu peux echapper a l'ours si tu lui donne suffisamment de pintes. retente ta chance
-    if score >5 tu y es presque l'ours a encore soif mais il a un stock de biere suffisant
-        && 10  bravo tu connais bien la promo, l'ours est ton ami.
-    --><a href="http://www.freepik.com"><img class="bear" src="assets/meanBear.png" width="200"
-                alt="image cartoon d'un ours en colere"></a>
+        <!-- if score >=5<9  tu y es presque l'ours a encore soif mais il a un stock de biere suffisant
+-->
+        <img class="bear" src="assets/meanBear.png" width="200" alt="image cartoon d'un ours en colere"></a>
+        <!-- positionner l'ours dans un coin de la page-->
 
+        <!--   && 10  bravo tu connais bien la promo, l'ours est ton ami.-->
         <img class="bear" src="assets/cuteBear.png" width="200" alt="image cartoon d'un ourson mignon">
+
+        <img class="cheersPic" src="assets/cheers.png " width="200" alt="icones de chopes de bieres trinquant">
+
+
+
 
 
 
@@ -43,6 +51,8 @@
             <p class="copyright">#Team Jean Pierre Foucault</p>
         </footer>
     </main>
+    <script>const p = document.getElementsByClassName('diplayPseudo')
+        p.innerHTML = ${ pseudo };</script>
 </body>
 
 </html>
