@@ -172,4 +172,4 @@ function comptageBeer(questionnaire) {
       return scoreCookie
     }
 }
-export {scoreBeer, scoreCookie}
+// export {scoreBeer, scoreCookie}

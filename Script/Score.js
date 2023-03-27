@@ -3,7 +3,7 @@
 
 let pseudo = "Test"
 let scoreCookie = 1
-let scoreBeer = 14
+let scoreBeer = 12
 
 const scoreFinal = document.querySelector('.score')
 switch(scoreBeer){
@@ -35,7 +35,7 @@ switch(scoreBeer){
         scoreFinal.innerHTML = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! L'ours a eu ${scoreBeer} bières et ${scoreCookie} cookie. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
         break;
     default:
-        score.innerHTML = `42`;
+        scoreFinal.innerHTML = `42`;
         break;
 }
 

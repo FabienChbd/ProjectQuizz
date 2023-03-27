@@ -8,4 +8,4 @@
     else
     {greet.innerHTML = `Hello Anonymous player !!!`}
 
-    export {pseudo}
+    // export {pseudo}
