@@ -209,6 +209,12 @@ for (let i = 0; i < questionnaire.length; i++) {
 const validateButton = document.getElementsByClassName("valider");
 validateButton.addEventListener("click",)
 
+
+
+
+
+
+
 function displayQuizz() {
     quizz.container.innerHTML = "";
 
@@ -224,8 +230,14 @@ possibleAnswers.forEach(possibleAnswer => {
     })
 }
 
-
-//pour le score 
+function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion >= questions.length) {
+            showScore();
+            return;
+        }
+    }
+//pour le score
 
 // const score = 0
 // const updatedScore = Number
