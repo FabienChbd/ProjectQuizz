@@ -1,3 +1,4 @@
+
     const pseudo = prompt("C'est quoi ton blaze")
     const greet = document.querySelector('.hello')
     if (pseudo)
@@ -9,3 +10,4 @@
     {greet.textContent = `Hello Anonymous player !!!`}
 
     // export {pseudo}
+

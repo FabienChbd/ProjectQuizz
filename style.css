@@ -4,9 +4,11 @@
 
 /* Body original couleur + padding pourquoi ??? */
 body {
+
     /* padding-top: 60px;
     padding-bottom: 60px;*/
     margin: 0;
+
     background-color: #f5f5dc;
 }
 
@@ -14,12 +16,14 @@ body {
 
 main {
     margin-top: 120px;
+
     margin-bottom: 60px;
     /*width: 90%;*/
     /* margin: auto;*/
+
 }
 
-
+/*? de qui? a voir*/
 /*a {
     text-decoration : none;
 }*/
@@ -35,6 +39,28 @@ main {
     text-align: center;
 }
 
+/*image et score de la page end mobilefirst*/
+.bear {
+    display: flex;
+    margin: auto;
+}
+
+.scoreTitle {
+    font-size: 120%;
+}
+
+.userScore {
+    font-size: 140%;
+    margin-left: 15px;
+}
+
+.beerCounter {
+    position: flex;
+    margin-left: 50px;
+    margin-top: -70px;
+}
+
+/*Toute cette partie est ok pour moi (tv)*/
 /*Bouton  page answer OK*/
 
 .buttonNext {
@@ -42,9 +68,10 @@ main {
     justify-content: space-around;
     width: 400px;
     height: 50px;
+    margin: auto;
 }
 
-/*Toute cette partie est ok pour moi (tv)*/
+
 
 .next {
     background-color: #FFBD3A;
@@ -53,11 +80,7 @@ main {
     font-family: 'Lucida Sans';
     width: 200px;
     height: 50px;
-}
-
-.bear {
-    display: flex;
-    margin: auto;
+    padding: 0;
 }
 
 .cheersPic {
@@ -69,7 +92,19 @@ main {
     text-align: center;
 }
 
+/*Ajout du pseudo sur la page endQuizz html*/
+/*.displayPseudo {
+    text-align: center;
+    font-size: 180%;
+}
+
+.scoreSentence {
+    font-size: 120%;
+}
+*/
+
 /*Header pour moi (tv) c'est OK*/
+
 header {
     position: fixed;
     top: 0;
@@ -80,6 +115,7 @@ header {
 }
 
 /* css grid mobile first */
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -125,11 +161,13 @@ header {
     background-color: #ffc45e;
 }
 
-.valider:hover {
+.valider:hover,
+.next:hover {
     background-color: coral;
 }
 
-.valider:active {
+.valider:active,
+.next:active {
     background-color: green;
 }
 
@@ -182,8 +220,10 @@ header {
     text-align: center;
     font-weight: bolder;
     font-family: sans-serif;
+
     font-size: 4em;
     margin-top: 60px;
+
 }
 
 /* Rattaché à Hello.js (easter egg caché by Fabien XD */
@@ -220,14 +260,33 @@ button {
             ". valider valider .";
     }
 
-    /* css grid desktop first */
+/*images et counter pour page endquizz*/
+    .bear {
+        width: 40%;
+    }
 
-    .buttonNext {
+    .scoreTitle {
+        font-size: 190%;
+        margin-left: 140px;
+    }
+
+    .userScore {
+        margin-left: 220px;
+        font-size: 200%;
+    }
+
+    .beerCounter {
+        position: flex;
+        margin-left: 260px;
+        margin-top: -90px;
+        width: 10%;
+    }
+
+   .buttonNext {
         display: flex;
-        justify-content: space-around;
+        margin-left: 400px;
         width: 400px;
-        height: 50px;
-        margin: auto
+        height: 30px;
     }
 
     .next {
@@ -237,11 +296,18 @@ button {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         width: 200px;
         height: 50px;
+        margin-bottom: 400px;
     }
 
     .endOfQuizz {
         text-align: center;
     }
+
+/*recup le pseudo sur la page endQuizz*/
+    .displayPseudo {
+        text-align: center;
+    }
+
 
     footer {
         flex-direction: row;
@@ -249,7 +315,9 @@ button {
         gap: 20px;
     }
 
+
     .logo {
         max-width: 600px;
     }
+
 }
