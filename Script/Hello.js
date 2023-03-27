@@ -2,10 +2,10 @@
     const greet = document.querySelector('.hello')
     if (pseudo)
         {if (pseudo.indexOf ('Taupe') !==-1 )
-        {greet.innerHTML = `Hello petite taupe mais fait attention à l'ours !!!`}
+        {greet.textContent = `Hello petite taupe mais fait attention à l'ours !!!`}
         else 
-    {greet.innerHTML = `Hello ${pseudo} !!!`}}
+    {greet.textContent = `Hello ${pseudo} !!!`}}
     else
-    {greet.innerHTML = `Hello Anonymous player !!!`}
+    {greet.textContent = `Hello Anonymous player !!!`}
 
     // export {pseudo}
