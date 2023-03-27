@@ -209,29 +209,42 @@ for (let i = 0; i < questionnaire.length; i++) {
 const validateButton = document.getElementsByClassName("valider");
 validateButton.addEventListener("click",)
 
+function displayQuizz() {
+    quizz.container.innerHTML = "";
 
+    questions.forEach((question,))
+}
+
+
+const possibleAnswers = document.querySelectorAll(".reponse")
+possibleAnswers.forEach(possibleAnswer => {
+    possibleAnswers.addEventListener("click", function () {
+        const selectedAnswer = possibleAnswer.textContent;
+        userResponse[question]
+    })
+}
 
 
 //pour le score 
 
-const score = 0
-const updatedScore = Number
+// const score = 0
+// const updatedScore = Number
 
-//pour comparer la reponse d'user a la bonne
-
-
-function userScoreUpdate() {
-    const isCorrect = userReponse === questionnaire.correct
-    if (isCorrect) {
-        score++
-    }
-}
-for (let j = 0; j < questionnaire.length; j++) { userScoreUpdate() }
+// //pour comparer la reponse d'user a la bonne
 
 
-//pour afficher le score final sur la page endQuizz
-const userScore = document.getElementsByClassName("userScore")
-userScore.innerText = updatedScore
+// function userScoreUpdate() {
+//     const isCorrect = userReponse === questionnaire.correct
+//     if (isCorrect) {
+//         score++
+//     }
+// }
+// for (let j = 0; j < questionnaire.length; j++) { userScoreUpdate() }
+
+
+// //pour afficher le score final sur la page endQuizz
+// const userScore = document.getElementsByClassName("userScore")
+// userScore.innerText = updatedScore
 
 
 

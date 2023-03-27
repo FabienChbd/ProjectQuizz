@@ -63,10 +63,6 @@ main {
     padding: 0;
 }
 
-.next:active {
-    background-color: green;
-}
-
 .cheersPic {
     display: flex;
     margin: auto;
