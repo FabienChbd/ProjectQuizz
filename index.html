@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>Quizz : A beer for the bear !</title>
 </head>
-
 <body>
     <header>
         <div class=titre> A beer for the bear </div>
@@ -25,13 +24,9 @@
             <div>
               <img class="logo" src="assets/logoquiz.png" alt="Logo du quizz">
             </div>
-        
-        
             <div>
               <p class="hello">Hello Wilder !!!</p><br>
             </div>
-        
-        
             <div class="go">
               <button type="submit" data-index="0">Go</button>
             </div>
@@ -41,32 +36,31 @@
 
                 <h1 class="quest">Question : </h1>
             </div>
-            <div class="reponse reponse-1">
-                <p class="R1" data-reponse="R1">Réponse-1 ?</p>
+            <div class="reponse reponse-1" data-response="R1">
+                <p class="R1">Réponse-1 ?</p>
             </div>
-            <div class="reponse reponse-2">
-                <p class="R2" data-reponse="R2">Réponse-2 ?</p>
+            <div class="reponse reponse-2" data-response="R2">
+                <p class="R2">Réponse-2 ?</p>
             </div>
-            <div class="reponse reponse-3">
-                <p class="R3" data-reponse="R3">Réponse-3 ?</p>
+            <div class="reponse reponse-3" data-response="R3">
+                <p class="R3">Réponse-3 ?</p>
             </div>
-            <div class="reponse reponse-4">
-                <p class="R4" data-reponse="R4">Réponse-4 ?</p>
+            <div class="reponse reponse-4" data-response="R4">
+                <p class="R4">Réponse-4 ?</p>
             </div>
         </div>
-
         <div id="wrongAnswer">
             <h1 class="answerPage"> Mauvaise Réponse <br>J'ai soif !!
             </h1>
             <img class="bear" src="assets/meanBear.png" width="200" alt="image cartoon d'un ours en colere"></a>
             <div>
                 <p class="scoreTitle"> Score:</p>
-                <p class="userScore">1</p>
+                <p class="userScoreW"></p>
                 <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
                 </p>
             </div>
             <div class="buttonNext">
-                <button class="next" type="submit" data-index="0"> Question suivante</button>
+                <button class="next" > Question suivante</button>
             </div>
         </div><br>
         <div id="rightAnswer">
@@ -75,47 +69,38 @@
 
             <div>
                 <p class="scoreTitle"> Score:</p>
-                <p class="userScore">1</p>
+                <p class="userScoreR"></p>
                 <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
             </div>
             <div class="buttonNext">
-                <button class="next" type="button" data-index="0">Question suivante</button>
+                <button class="next" >Question suivante</button>
             </div>
         </div>
+        <section class="endQuizz">
         <h1 class="endOfQuizz">Fin du Quizz</h1>
 
-
-
   <div class="score">Affichage du score dans quelques instants...</div>
-        <div class="displayPseudo">pseudo</div>
-        <p class="scoreSentence">
-            ton score est de:
-        </p>
-        <div class="finalScore">x</div><br><br>
-
         <div><img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere"></div>
         <!-- if score <5
         tu ne connais pas assez ta promo, l'ours est assoiffe et a envie de te devorer-->
-
         <!-- if score >=5<9  tu y es presque l'ours a encore soif mais il a un stock de biere suffisant
 -->
         <img class="bear" src="assets/meanBear.png" width="200" alt="image cartoon d'un ours en colere">
         <!-- positionner l'ours dans un coin de la page-->
-
        <img class="cheersPic" src="assets/cheers.png " width="200" alt="icones de chopes de bieres trinquant">
-
         <!--   && 10  bravo tu connais bien la promo, l'ours est ton ami.-->
         <img class="bear" src="assets/cuteBear.png" width="200" alt="image cartoon d'un ourson mignon">
-
+    </section>
     </main>
-
     <footer>
         <p class="copyright">© Créé par Delphine Fabien Thomas Cathy</p>
         <p class="copyright">#Team Jean Pierre Foucault</p>
     </footer>
 
 
+    <script src="Script/Hello.js"></script>
     <script src="Script/BDQuestions.js"></script>
+    <script src="Script/Score.js"></script>
 
 </body>
 

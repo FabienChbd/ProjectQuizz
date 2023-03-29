@@ -8,17 +8,8 @@ body {
 }
 
 main {
-<<<<<<< HEAD
     margin-top: 30px;
-
     margin-bottom: 50px;
-    /*width: 90%;*/
-    /* margin: auto;*/
-
-=======
-    margin-top: 120px;
-    margin-bottom: 60px;
->>>>>>> 5a45d6401fc3e97273ca3d18d1e18ab347f3b43a
 }
 
 .copyright {
@@ -89,6 +80,10 @@ main {
     text-align: center;
 }
 
+.endQuizz{
+    visibility:hidden;
+
+}
 header {
     position: fixed;
     top: 0;
@@ -260,6 +255,10 @@ button {
     background-color: yellow;
     cursor:pointer;
     
+}
+
+.score {
+    text-align: center;
 }
 
 

@@ -1,8 +1,8 @@
 // import {pseudo} from hello.js
 // import {scoreBeer} from BDquestions.js
 
-let pseudo = "Test"
-let scoreBeer = 12
+// let pseudo = "Test"
+// let scoreBeer = 12
 
 const scoreFinal = document.querySelector('.score')
 switch(scoreBeer){

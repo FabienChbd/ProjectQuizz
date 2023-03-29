@@ -1,5 +1,5 @@
 
-    const pseudo = prompt("C'est quoi ton blaze")
+    //const pseudo = prompt("C'est quoi ton blaze")
     const greet = document.querySelector('.hello')
     if (pseudo)
         {if (pseudo.indexOf ('Taupe') !==-1 )
