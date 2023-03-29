@@ -8,7 +8,7 @@ const questionnaire = [
 
     {
         question: "Qui est surnommé le dormeur ?",
-        reponse: ["Cathy", "42", "François le Français", "Nills"],
+        reponse: ["Cathy", "42", "Thomas D", "Nills"],
         correct: null
     },
 
@@ -20,7 +20,7 @@ const questionnaire = [
 
     {
         question: "Qui a vécu aux États Unis ?",
-        reponse: ["Amaury", "Wilhem", "Nicolas", "Nills"],
+        reponse: ["Amaury", "Wilhem", "Francois le Francais", "Nills"],
         correct: null
     },
 
@@ -111,54 +111,83 @@ questionnaire[12].correct = questionnaire[12].reponse[1]
 questionnaire[13].correct = questionnaire[13].reponse[3]
 questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14].reponse[1]) || (questionnaire[14].reponse[2]) || (questionnaire[14].reponse[3])
 
+const startQuestion = document.querySelector(".go > button")
+startQuestion.addEventListener("click", quizz)
+let index = 0
+
 //Implantation dans le HTML
 function quizz(event) {
     let index = event.target.dataset.index
+    console.log(event.target)
     const question = document.querySelector('.quest')
-    question.textContent= questionnaire[index].question
+    question.textContent = questionnaire[index].question
 
     const reponses = document.querySelectorAll('.reponse')
-   reponses.forEach((r, i) => {
-      r.textContent= questionnaire[index].reponse[i]
-      console.log(questionnaire[index].reponse[i])}
+    reponses.forEach((r, i) => {
+        r.textContent = questionnaire[index].reponse[i]
+        r.dataset.correct = questionnaire[index].correct === questionnaire[index].reponse[i]
+        console.log(questionnaire[index].reponse[i])
+    }
     )
 }
 
 // Enregistrement réponse user
-const reponsesQuestion = document.querySelectorAll(".R1, .R2, .R3, .R4"); // les class css
-//Ensuite on veut récupérer le click sur une R1 ou R1 ou ... et le stocker dans une variable qui la comparera à la bonne réponse
+const reponsesQuestion = document.querySelectorAll(".reponse")
 reponsesQuestion.forEach(response => {
     response.addEventListener("click", function (event) {
-        console.log(response.dataset.response) // data-response sur le <p>
-        response.dataset.response = questionnaire[i].reponsesQuestion
-        checkAnswer()
+        checkAnswer(response)
+
+        // Passage question suivante quizz (Q1-->Q15)
+        index++
+        // A partir de la page Wrong
+        const nextQuestionW = document.querySelector(".buttonNextW > button")
+        nextQuestionW.addEventListener("click", quizz)
+        nextQuestionW.dataset.index = index
+        nextQuestionW.dataset.index = index
+        // A partir de la page Right
+        const nextQuestionR = document.querySelector(".buttonNextR > button")
+        nextQuestionR.addEventListener("click", quizz)
+        nextQuestionR.dataset.index = index
+        nextQuestionR.dataset.index = index
     })
 })
+
+
+
+
 console.log(reponsesQuestion)
 
 // verifier bonne ou mauvaise reponse de l'user => affichage answer
-function checkAnswer(){
-    if (reponsesQuestion === questionnaire[i].correct ) {
-        const goodAnswer = document.querySelector("#rightAnswer")
-        goodAnswer.style.visibility = "visible"
-        scoreBeer++
+function checkAnswer(response) {
+    if (index < 14) {
+        if (response.dataset.correct === "true") {
+            const goodAnswer = document.querySelector("#rightAnswer")
+            goodAnswer.style.visibility = "visible"
+            scoreBeer++
+            console.log(scoreBeer)
+            let scoreR = document.querySelector('.userScoreR')
+            scoreR.textContent = (`Tu as gagné ${scoreBeer} jusqu'a maintenant!!!`)
+        }
+        else {
+            const wrongAnswer = document.querySelector("#wrongAnswer")
+            wrongAnswer.style.visibility = "visible"
+            console.log(scoreBeer)
+            let scoreW = document.querySelector('.userScoreW')
+            scoreW.textContent = (`Tu as ${scoreBeer} `)
+        }
+    } else {
+        const endOfQuizz = document.querySelector(".endQuizz")
+        endOfQuizz.style.visibility = "visible"
+
     }
-    else{
-        const wrongAnswer = document.querySelector("#wrongAnswer")
-        wrongAnswer.style.visibility="visible"
-    }
-    return 
-    }
+    return scoreBeer
+    console.log(`score ${scoreBeer}`);
+}
+console.log(scoreBeer);
+const scoreFinal = document.querySelector('.score');
 
 
-// Passage question suivante quizz (index --> Q1)
-const startQuestion = document.querySelector(".go > button")
-console.log(startQuestion)
-startQuestion.addEventListener("click", quizz)
-// questionnaire[i++].question
 
-// // Passage question suivante quizz (Q1-->Q15)
-// const nextQuestion = document.querySelector(".buttonNext")
 // nextQuestion.addEventListener("click", quizz)
 // nextQuestion.dataset.index = questionnaire[i].question
 // questionnaire[i++].question
@@ -174,10 +203,9 @@ startQuestion.addEventListener("click", quizz)
 
 
 
+//function endedQuizz()
+//const end = document.querySelector(".endQuizz")
+//.end.style.visibility="visible"
+//
 
-//const endQuizz{}
 //button restart => link to welcome page
-
-
-// export {scoreBeer, scoreCookie}
-
