@@ -113,16 +113,15 @@ questionnaire[14].correct = (questionnaire[14].reponse[0]) || (questionnaire[14]
 
 //Implantation dans le HTML
 function quizz(event) {
+    let index = event.target.dataset.index
     const question = document.querySelector('.quest')
-    question.innerText= questionnaire[i].question
-    const reponse1 = document.querySelector('.R1')
-    reponse1.innerText= questionnaire[i].reponse[0]
-    const reponse2 = document.querySelector('.R2')
-    reponse2.innerText= questionnaire[i].reponse[1]
-    const reponse3 = document.querySelector('.R3')
-    reponse3.innerText= questionnaire[i].reponse[2]
-    const reponse4 = document.querySelector('.R4')
-    reponse4.innerText= questionnaire[i].reponse[3]
+    question.textContent= questionnaire[index].question
+
+    const reponses = document.querySelectorAll('.reponse')
+   reponses.forEach((r, i) => {
+      r.textContent= questionnaire[index].reponse[i]
+      console.log(questionnaire[index].reponse[i])}
+    )
 }
 
 // Enregistrement réponse user
@@ -132,6 +131,7 @@ reponsesQuestion.forEach(response => {
     response.addEventListener("click", function (event) {
         console.log(response.dataset.response) // data-response sur le <p>
         response.dataset.response = questionnaire[i].reponsesQuestion
+        checkAnswer()
     })
 })
 console.log(reponsesQuestion)
@@ -151,10 +151,17 @@ function checkAnswer(){
     }
 
 
-// Passage question suivante
-const nextQuestion = document.querySelector(".buttonNext")
-nextQuestion.addEventListener("click", quizz)
-nextQuestion.dataset.index = questionnaire[i].question
+// Passage question suivante quizz (index --> Q1)
+const startQuestion = document.querySelector(".go > button")
+console.log(startQuestion)
+startQuestion.addEventListener("click", quizz)
+// questionnaire[i++].question
+
+// // Passage question suivante quizz (Q1-->Q15)
+// const nextQuestion = document.querySelector(".buttonNext")
+// nextQuestion.addEventListener("click", quizz)
+// nextQuestion.dataset.index = questionnaire[i].question
+// questionnaire[i++].question
 
 
 

@@ -245,6 +245,7 @@ header {
 }
 
 /*Bouton non fonctionnel sur la page index.html*/
+
 button {
     /* TODO - Ajouter une classe !!! */
     width: 250px;
@@ -349,6 +350,9 @@ button {
     }
 }
 
+.go{
+    padding-bottom : 40px;
+}
 
 /* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
