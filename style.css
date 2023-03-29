@@ -42,12 +42,12 @@ main {
     margin-top: -70px;
 }
 
-#wrongAnswer {
-    display: none;
+#wrongAnswer{
+    visibility:hidden;
 }
 
-#rightAnswer {
-    display: none;
+#rightAnswer{
+    visibility:hidden;
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
