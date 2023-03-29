@@ -60,6 +60,13 @@ main {
     margin-top: -70px;
 }
 
+#wrongAnswer{
+    display:none;
+}
+
+#rightAnswer{
+    display:none;
+}
 /*Toute cette partie est ok pour moi (tv)*/
 /*Bouton  page answer OK*/
 
