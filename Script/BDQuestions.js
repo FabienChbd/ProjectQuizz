@@ -91,6 +91,8 @@ const questionnaire = [
     },
 ]
 
+let scoreBeer = 0; //initialisation score
+
 
 //Bonnes réponses
 questionnaire[0].correct = questionnaire[0].reponse[0]
@@ -136,29 +138,24 @@ console.log(reponsesQuestion)
 
 // verifier bonne ou mauvaise reponse de l'user => affichage answer
 function checkAnswer(){
-    if reponsesQuestion =={
-        document.style.
+    if (reponsesQuestion === questionnaire[i].correct ) {
+        const goodAnswer = document.querySelector("#rightAnswer")
+        goodAnswer.style.visibility = "visible"
+        scoreBeer++
     }
-    comptageBeer()
+    else{
+        const wrongAnswer = document.querySelector("#wrongAnswer")
+        wrongAnswer.style.visibility="visible"
+    }
     return 
     }
+
 
 // Passage question suivante
 const nextQuestion = document.querySelector(".buttonNext")
 nextQuestion.addEventListener("click", quizz)
 
 
-// Comptage score
-function comptageBeer(questionnaire) {
-    let scoreBeer = 0;
-   
-  (let i = 0; i < questionnaire.length; i++) {
-           if (questionnaire[i].userReponse === questionnaire[i].correct) {
-          scoreBeer++;
-        }
-      return scoreBeer
-    }
-}
 
 
 // Code a trier
