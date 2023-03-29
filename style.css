@@ -225,6 +225,7 @@ header {
 }
 
 /*Bouton non fonctionnel sur la page index.html*/
+
 button {
     /* TODO - Ajouter une classe !!! */
     width: 200px;
@@ -237,6 +238,10 @@ button {
     display: block;
     margin: auto;
     background-color: yellow;
+}
+
+.go{
+    padding-bottom : 40px;
 }
 
 /* au passage en vue Desktop l'affichage grid change*/

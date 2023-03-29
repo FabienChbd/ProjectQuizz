@@ -2,7 +2,6 @@
 // import {scoreBeer} from BDquestions.js
 
 let pseudo = "Test"
-let scoreCookie = 1
 let scoreBeer = 12
 
 const scoreFinal = document.querySelector('.score')
