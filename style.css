@@ -43,11 +43,11 @@ main {
 }
 
 #wrongAnswer{
-    display:none;
+    visibility:hidden;
 }
 
 #rightAnswer{
-    display:none;
+    visibility:hidden;
 }
 /*Toute cette partie est ok pour moi (tv)*/
 /*Bouton  page answer OK*/
