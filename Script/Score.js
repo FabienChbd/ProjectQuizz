@@ -1,3 +1,6 @@
+console.log(scoreBeer);
+const scoreFinal = document.querySelector('.score');
+
 switch (scoreBeer) {
     case 0:
         scoreFinal.textContent = `${pseudo}, ceci est techniquement impossible.`;
