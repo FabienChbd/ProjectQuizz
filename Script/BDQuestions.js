@@ -120,13 +120,14 @@ function quizz(event) {
     let index = event.target.dataset.index
     console.log(event.target)
     const question = document.querySelector('.quest')
-    question.textContent= questionnaire[index].question
+    question.textContent = questionnaire[index].question
 
     const reponses = document.querySelectorAll('.reponse')
-   reponses.forEach((r, i) => {
-      r.textContent= questionnaire[index].reponse[i]
-      r.dataset.correct = questionnaire[index].correct === questionnaire[index].reponse[i]
-      console.log(questionnaire[index].reponse[i])}
+    reponses.forEach((r, i) => {
+        r.textContent = questionnaire[index].reponse[i]
+        r.dataset.correct = questionnaire[index].correct === questionnaire[index].reponse[i]
+        console.log(questionnaire[index].reponse[i])
+    }
     )
 }
 
@@ -135,36 +136,91 @@ const reponsesQuestion = document.querySelectorAll(".reponse")
 reponsesQuestion.forEach(response => {
     response.addEventListener("click", function (event) {
         checkAnswer(response)
-            // Passage question suivante quizz (Q1-->Q15)
-    const nextQuestion = document.querySelector(".buttonNext > button")
-    console.log(nextQuestion)
-    nextQuestion.addEventListener("click",quizz)
-    index++
-    nextQuestion.dataset.index = index
-    console.log("nextQuestion:", nextQuestion)
+
+        // Passage question suivante quizz (Q1-->Q15)
+        index++
+        // A partir de la page Wrong
+        const nextQuestionW = document.querySelector(".buttonNextW > button")
+        nextQuestionW.addEventListener("click", quizz)
+        nextQuestionW.dataset.index = index
+        nextQuestionW.dataset.index = index
+        // A partir de la page Right
+        const nextQuestionR = document.querySelector(".buttonNextR > button")
+        nextQuestionR.addEventListener("click", quizz)
+        nextQuestionR.dataset.index = index
+        nextQuestionR.dataset.index = index
     })
 })
+
+
+
+
 console.log(reponsesQuestion)
 
 // verifier bonne ou mauvaise reponse de l'user => affichage answer
-function checkAnswer(response){
-    if (response.dataset.correct === "true") {
-        const goodAnswer = document.querySelector("#rightAnswer")
-        goodAnswer.style.visibility = "visible"
-        scoreBeer++
-        let scoreR = document.querySelector('.userScoreR')
-        scoreR.textContent = (`Tu as gagné ${scoreBeer} jusqu'a maintenant!!!`)
+function checkAnswer(response) {
+    if (index < 14) {
+        if (response.dataset.correct === "true") {
+            const goodAnswer = document.querySelector("#rightAnswer")
+            goodAnswer.style.visibility = "visible"
+            scoreBeer++
+            console.log(scoreBeer)
+            let scoreR = document.querySelector('.userScoreR')
+            scoreR.textContent = (`Tu as gagné ${scoreBeer} jusqu'a maintenant!!!`)
+        }
+        else {
+            const wrongAnswer = document.querySelector("#wrongAnswer")
+            wrongAnswer.style.visibility = "visible"
+            let scoreW = document.querySelector('.userScoreW')
+            scoreW.textContent = (`Tu as ${scoreBeer} `)
+        }
+    } else {
+        const endOfQuizz = document.querySelector(".endQuizz")
+        endOfQuizz.style.visibility = "visible"
+        return scoreBeer
+        console.log(`score ${scoreBeer}`);
     }
-    else {
-        const wrongAnswer = document.querySelector("#wrongAnswer")
-        wrongAnswer.style.visibility="visible"
-        let scoreW = document.querySelector('.userScoreW')
-        scoreW.textContent = (`Tu as ${scoreBeer} `)
-    }
 
- }
+}
+console.log(scoreBeer);
+const scoreFinal = document.querySelector('.score');
 
 
+switch (scoreBeer) {
+    case 0:
+        scoreFinal.textContent = `${pseudo}, ceci est techniquement impossible.`;
+        break;
+    case 1:
+        scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
+        break;
+    case 2:
+        scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
+        break;
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+        scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas.COURS VITE!!!`;
+        break;
+    case 7:
+    case 8:
+    case 9:
+        scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
+        break;
+    case 10:
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+        scoreFinal.textContent = `Bravo ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+        break;
+    case 15:
+        scoreFinal.textContent = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+        break;
+    default:
+        scoreFinal.textContent = `42`;
+        break;
+}
 // nextQuestion.addEventListener("click", quizz)
 // nextQuestion.dataset.index = questionnaire[i].question
 // questionnaire[i++].question

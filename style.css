@@ -42,12 +42,12 @@ main {
     margin-top: -70px;
 }
 
-#wrongAnswer{
-    visibility:hidden;
+#wrongAnswer {
+    visibility: hidden;
 }
 
-#rightAnswer{
-    visibility:hidden;
+#rightAnswer {
+    visibility: hidden;
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -80,10 +80,11 @@ main {
     text-align: center;
 }
 
-.endQuizz{
-    visibility:hidden;
+.endQuizz {
+    visibility: hidden;
 
 }
+
 header {
     position: fixed;
     top: 0;
@@ -203,7 +204,7 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 0.7em;
- 
+
 
 }
 
@@ -253,8 +254,8 @@ button {
     display: block;
     margin: auto;
     background-color: yellow;
-    cursor:pointer;
-    
+    cursor: pointer;
+
 }
 
 .score {
@@ -276,12 +277,13 @@ button {
         display: block;
         margin: auto;
         background-color: yellow;
-     
-    } 
+
+    }
+
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-auto-flow: row;
         gap: 10px 10px;
         grid-template-areas:
@@ -292,47 +294,47 @@ button {
             ". reponse-4 ."
             ". valider .";
     }
-    
+
     .question {
         grid-area: question;
         background-color: #fa5252;
     }
-    
+
     .reponse-1 {
         grid-area: reponse-1;
         background-color: #228be6;
     }
-    
+
     .reponse-2 {
         grid-area: reponse-2;
         background-color: #7950f2;
     }
-    
+
     .reponse-3 {
         grid-area: reponse-3;
         background-color: #12b886;
     }
-    
+
     .reponse-4 {
         grid-area: reponse-4;
         background-color: #e64980;
     }
-    
+
     .valider {
         grid-area: valider;
         background-color: #ffc45e;
     }
-    
+
     .valider:hover,
     .next:hover {
         background-color: coral;
     }
-    
+
     .valider:active,
     .next:active {
         background-color: green;
     }
-    
+
     /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
     .question,
     .reponse-1,
@@ -349,8 +351,8 @@ button {
     }
 }
 
-.go{
-    padding-bottom : 40px;
+.go {
+    padding-bottom: 40px;
 }
 
 /* au passage en vue Desktop l'affichage grid change*/
