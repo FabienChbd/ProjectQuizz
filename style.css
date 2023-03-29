@@ -49,6 +49,7 @@ main {
 #rightAnswer{
     visibility:hidden;
 }
+
 /*Toute cette partie est ok pour moi (tv)*/
 /*Bouton  page answer OK*/
 
@@ -162,11 +163,19 @@ header {
 }
 
 /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
-.question,
 .reponse-1,
 .reponse-2,
 .reponse-3,
 .reponse-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px rgb(101, 93, 93) solid;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.question {
     display: flex;
     justify-content: center;
     align-items: center;
