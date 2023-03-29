@@ -154,6 +154,7 @@ function checkAnswer(){
 // Passage question suivante
 const nextQuestion = document.querySelector(".buttonNext")
 nextQuestion.addEventListener("click", quizz)
+nextQuestion.dataset.index = questionnaire[i].question
 
 
 
