@@ -96,6 +96,14 @@ main {
     padding: 0;
 }
 
+.next:hover {
+    background-color: #cf9011;
+}
+
+.next:active {
+    background-color: #eabc60;
+}
+
 .cheersPic {
     display: flex;
     margin: auto;
@@ -293,8 +301,6 @@ button {
     text-align: center;
 }
 
-
-
 /* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
     .container {
@@ -346,5 +352,4 @@ button {
     .logo {
         max-width: 600px;
     }
-
 }
