@@ -41,7 +41,7 @@ main {
 }
 
 .scoreTitle,
-.endOfQuizz {
+.endQuizz {
     font-size: 200%;
     color: blue;
     text-decoration: underline

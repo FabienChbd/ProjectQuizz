@@ -170,14 +170,14 @@ function checkAnswer(response) {
             scoreBeer++
             console.log(scoreBeer)
             let scoreR = document.querySelector('.userScoreR')
-            scoreR.textContent = (`Tu as gagné ${scoreBeer} jusqu'a maintenant!!!`)
+            scoreR.textContent = (`Tu as gagné ${scoreBeer} bières jusqu'a maintenant!!!`)
         }
         else {
             const wrongAnswer = document.querySelector("#wrongAnswer")
             wrongAnswer.style.display = "block"
             console.log(scoreBeer)
             let scoreW = document.querySelector('.userScoreW')
-            scoreW.textContent = (`Tu as ${scoreBeer} `)
+            scoreW.textContent = (`Tu as ${scoreBeer} bières `)
         }
     } else {
         const endOfQuizz = document.querySelector(".endQuizz")
