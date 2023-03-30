@@ -44,16 +44,22 @@ main {
 
 #wrongAnswer {
     display: none;
+    height: 0;
 }
 
 #rightAnswer {
     display: none;
+    height: 0
+
 }
 
 .cuteBear,
 .meanBear,
 .cheersPic {
     display: none;
+
+    height: 0
+
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -88,7 +94,10 @@ main {
 
 .endQuizz {
     display: none;
+
+    height: 0
 }
+
 
 header {
     position: fixed;

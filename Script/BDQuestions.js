@@ -186,6 +186,8 @@ function checkAnswer(response) {
         switch (scoreBeer) {
             case 0:
                 scoreFinal.textContent = `${pseudo}, ceci est techniquement impossible.`;
+                // const lowScore = document.querySelector(".meanBear")
+                // lowScore.style.display = "block"
                 break;
             case 1:
                 scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
