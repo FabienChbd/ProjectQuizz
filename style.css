@@ -1,4 +1,6 @@
-.titre {
+
+
+.title {
     font-size: 2em;
 }
 
@@ -7,22 +9,18 @@ body {
     background-color: #f5f5dc;
 }
 
-main {
-<<<<<<< HEAD
+ /*Apparement pas d'utilité*/
+/*main { 
+
     margin-top: 30px;
 
     margin-bottom: 50px;
     /*width: 90%;*/
-    /* margin: auto;*/
-
-=======
-    margin-top: 120px;
-    margin-bottom: 60px;
->>>>>>> 5a45d6401fc3e97273ca3d18d1e18ab347f3b43a
-}
+    /* margin: auto;
+}*/
 
 .copyright {
-    margin: 2px
+    margin: 2px;
 }
 
 /* Centrage du texte sur la page*/
@@ -220,12 +218,6 @@ header {
     font-weight: lighter;
 }
 
-.logo {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    display: flex;
-}
 
 /*MAJ 270323.15:38 - à vérifier sur le index si ok / NOK - TODO : Utiliser une classe !! rattaché à l'inde.html */
 .quizz {
@@ -234,8 +226,8 @@ header {
     font-family: sans-serif;
     font-size: 3.5em;
     margin-top: 90px;
-    margin-bottom: 20px;
-
+    /*margin-bottom: 40px;*/
+margin-bottom :0px;
 }
 
 /* Rattaché à Hello.js (easter egg caché by Fabien XD */
@@ -248,8 +240,8 @@ header {
 
 button {
     /* TODO - Ajouter une classe !!! */
-    width: 250px;
-    padding: 45px;
+    width: 150px;
+    padding: 25px;
     border-radius: 20px;
     box-shadow: 6px 6px 0px;
     border-style: solid;
@@ -277,8 +269,16 @@ button {
         display: block;
         margin: auto;
         background-color: yellow;
-     
-    } 
+        cursor:pointer;
+    }
+    
+    .logo {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        display: flex;
+    }
+
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -349,10 +349,11 @@ button {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
-
+/*ne sert à rien
 .go{
     padding-bottom : 40px;
-}
+}*/
+
 
 /* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
@@ -367,6 +368,7 @@ button {
     }
 
     /*images et counter pour page endquizz*/
+    
     .bear {
         width: 40%;
     }
@@ -417,11 +419,21 @@ button {
     footer {
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
+       /* gap: 20px;*/
     }
 
     .logo {
-        max-width: 600px;
+        width: 300px;
+    
+        display:flex;
+         margin :auto;
+       
     }
 
+
+    .go{
+        padding-bottom : 40px;
+       margin-bottom:-20px;
+      margin-top :-50px;
+}
 }
