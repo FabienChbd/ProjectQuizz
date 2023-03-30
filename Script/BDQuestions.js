@@ -166,7 +166,7 @@ function checkAnswer(response) {
     if (index < 14) {
         if (response.dataset.correct === "true") {
             const goodAnswer = document.querySelector("#rightAnswer")
-            goodAnswer.style.visibility = "visible"
+            goodAnswer.style.display="block"
             scoreBeer++
             console.log(scoreBeer)
             let scoreR = document.querySelector('.userScoreR')
@@ -174,14 +174,14 @@ function checkAnswer(response) {
         }
         else {
             const wrongAnswer = document.querySelector("#wrongAnswer")
-            wrongAnswer.style.visibility = "visible"
+            wrongAnswer.style.display="block"
             console.log(scoreBeer)
             let scoreW = document.querySelector('.userScoreW')
             scoreW.textContent = (`Tu as ${scoreBeer} `)
         }
     } else {
         const endOfQuizz = document.querySelector(".endQuizz")
-        endOfQuizz.style.visibility = "visible"
+        endOfQuizz.style.display="block"
         const scoreFinal = document.querySelector('.score')
         switch (scoreBeer) {
             case 0:
@@ -216,6 +216,7 @@ function checkAnswer(response) {
 
 
 
+<<<<<<< HEAD
 
 
 // nextQuestion.addEventListener("click", quizz)
@@ -227,6 +228,8 @@ function checkAnswer(response) {
 
 
 
+=======
+>>>>>>> 9d30a824fc10a4bbfe759eff846488b518908a9d
 
 // function hideA() {
 //     const wrongAnswer = document.querySelector(".wrongAnswer")
