@@ -48,6 +48,13 @@ main {
 
 #rightAnswer {
     display: none;
+
+}
+
+.cuteBear,
+.meanBear,
+.cheersPic {
+    display: none;
 }
 
 /*Toute cette partie est ok pour moi (tv)*/

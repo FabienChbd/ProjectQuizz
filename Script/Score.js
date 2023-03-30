@@ -1,11 +1,10 @@
 // import {pseudo} from hello.js
-// import {scoreBeer} from BDquestions.js
 
-let pseudo = "Test"
-let scoreBeer = 12
+
+// let scoreBeer = 12
 
 const scoreFinal = document.querySelector('.score')
-switch(scoreBeer){
+switch (scoreBeer) {
     case 0:
         scoreFinal.textContent = `Sérieusement !!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
         break;
@@ -28,7 +27,7 @@ switch(scoreBeer){
     case 11:
     case 12:
     case 13:
-    case 14 :
+    case 14:
         scoreFinal.textContent = `Bravo ${pseudo} ! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
         break;
     case 15:

@@ -115,6 +115,9 @@ const startQuestion = document.querySelector(".go > button")
 startQuestion.addEventListener("click", quizz)
 let index = 0
 
+
+
+
 //Implantation dans le HTML
 function quizz(event) {
     let index = event.target.dataset.index
@@ -137,58 +140,116 @@ const reponsesQuestion = document.querySelectorAll(".reponse")
 reponsesQuestion.forEach(response => {
     response.addEventListener("click", function (event) {
         checkAnswer(response)
+
         // Passage question suivante quizz (Q1-->Q15)
-        const nextQuestion = document.querySelector(".buttonNext > button")
-        console.log(nextQuestion)
-        nextQuestion.addEventListener("click", quizz)
+
         index++
-        nextQuestion.dataset.index = index
-        console.log("nextQuestion:", nextQuestion)
+        // A partir de la page Wrong
+
+        const nextQuestionW = document.querySelector(".buttonNextW > button")
+        nextQuestionW.addEventListener("click", quizz)
+        nextQuestionW.dataset.index = index
+        // nextQuestionW.dataset.index = index
+
+
+        // A partir de la page Right
+        const nextQuestionR = document.querySelector(".buttonNextR > button")
+        nextQuestionR.addEventListener("click", quizz)
+        nextQuestionR.dataset.index = index
+
+        // nextQuestionR.dataset.index = index
+        // const goodAnswer = document.querySelector("#rightAnswer")
+
     })
+
 })
 console.log(reponsesQuestion)
 
 // verifier bonne ou mauvaise reponse de l'user => affichage answer
 function checkAnswer(response) {
-    if (response.dataset.correct === "true") {
-        const goodAnswer = document.querySelector("#rightAnswer")
-        goodAnswer.style.visibility = "visible"
-        scoreBeer++
-        let scoreR = document.querySelector('.userScoreR')
-        scoreR.textContent = (`Tu as gagné ${scoreBeer} jusqu'a maintenant!!!`)
-    }
-    else {
-        const wrongAnswer = document.querySelector("#wrongAnswer")
-        wrongAnswer.style.visibility = "visible"
-        let scoreW = document.querySelector('.userScoreW')
-        scoreW.textContent = (`Tu as ${scoreBeer} `)
+    if (index < 14) {
+        if (response.dataset.correct === "true") {
+            const goodAnswer = document.querySelector("#rightAnswer")
+            goodAnswer.style.display = "block"
+
+            // goodAnswer.style.display = "block"
+            scoreBeer++
+            console.log(scoreBeer)
+            let scoreR = document.querySelector('.userScoreR')
+            scoreR.textContent = (`Tu as gagné ${scoreBeer} jusqu'a maintenant!!!`)
+            // const resetGA = document.querySelector("#rightAnswer")
+            // resetGA.style.display = "none"
+        }
+        else {
+            const wrongAnswer = document.querySelector("#wrongAnswer")
+            wrongAnswer.style.display = "block"
+            console.log(scoreBeer)
+            let scoreW = document.querySelector('.userScoreW')
+            scoreW.textContent = (`Tu as ${scoreBeer} `)
+            // wrongAnswer.style.display = "none"
+
+        }
+    } else {
+        const endOfQuizz = document.querySelector(".endQuizz")
+        endOfQuizz.style.display = "block"
+
+        const scoreFinal = document.querySelector('.score')
+        switch (scoreBeer) {
+            case 0:
+                scoreFinal.textContent = `${pseudo}, ceci est techniquement impossible.`;
+
+                break;
+            case 1:
+                scoreFinal.textContent = `Sérieusement!!! ${pseudo}, tu n'as même pas répondu à la question sur toi. L'ours n'a pas eu de bière. L'ours va donc te dévorer.`;
+                break;
+            case 2:
+                scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
+                break;
+            case 2: case 3: case 4: case 5: case 6:
+                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas.COURS VITE!!!`;
+                break;
+            case 7: case 8: case 9:
+                scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
+
+                break;
+            case 10: case 11: case 12: case 13: case 14:
+                scoreFinal.textContent = `Bravo ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+                break;
+            case 15:
+                scoreFinal.textContent = `Soit tu as créé le site et tu fais un test, soit tu es très fort. Dans ce dernier cas, bravo ${pseudo} ! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
+                break;
+            default:
+                scoreFinal.textContent = `42`;
+                break;
+        }
+
     }
 
+    return scoreBeer
+    console.log(`score ${scoreBeer}`);
 }
 
+// function hideA() {
+//     const wrongAnswer = document.querySelector(".wrongAnswer")
+//     const displayWA = wrongAnswer.style.display
+
+//     const rightAnswer = document.querySelector(".rightAnswer")
+//     const displayRA = rightAnswer.style.display
 
 
-// nextQuestion.addEventListener("click", quizz)
-// nextQuestion.dataset.index = questionnaire[i].question
-// questionnaire[i++].question
+//     if (displayWA == "block" || displayRA == "block") {
+//         displayWA.style.display = "none"
+//         displayRA.style.display = "none"
+//     }
+//     else {
+//         displayWA.style.display = "block"
+//         displayRA.style.display = "block"
+//     }
+// }
 
 
+// function hideButton() {
 
+//     document.getElementById('btn').style.display = 'none';
 
-// Code a trier
-
-// //pour afficher le score final sur la page endQuizz
-// const userScore = document.getElementsByClassName("userScore")
-// userScore.innerText = updatedScore
-
-//cacher la page accueil apres le go
-// const hideHome = document.querySelector(".start")
-// hideHome.style.display = "none"
-
-
-//function endedQuizz()
-//const end = document.querySelector(".endQuizz")
-//.end.style.visibility="visible"
-//
-
-//button restart => link to welcome page
+// }
