@@ -345,10 +345,6 @@ button:active {
         margin-bottom: 400px;
     }
 
-    .displayPseudo {
-        text-align: center;
-    }
-
     footer {
         flex-direction: row;
         justify-content: center;
