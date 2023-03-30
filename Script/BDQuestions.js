@@ -115,9 +115,12 @@ const startQuestion = document.querySelector(".go > button")
 startQuestion.addEventListener("click", quizz)
 let index = 0
 
+
 //Implantation dans le HTML
 function quizz(event) {
     let index = event.target.dataset.index
+      document.querySelector(".start").style.display = "none"
+
     console.log(event.target)
     const question = document.querySelector('.quest')
     question.textContent = questionnaire[index].question
@@ -136,6 +139,7 @@ const reponsesQuestion = document.querySelectorAll(".reponse")
 reponsesQuestion.forEach(response => {
     response.addEventListener("click", function (event) {
         checkAnswer(response)
+
 
         // Passage question suivante quizz (Q1-->Q15)
         index++
@@ -189,22 +193,13 @@ function checkAnswer(response) {
             case 2:
                 scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
                 break;
-            case 3:
-            case 4:
-            case 5:
-            case 6:
+                  case 3: case 4: case 5: case 6:
                 scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas.COURS VITE!!!`;
                 break;
-            case 7:
-            case 8:
-            case 9:
+                      case 7: case 8: case 9:
                 scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
                 break;
-            case 10:
-            case 11:
-            case 12:
-            case 13:
-            case 14:
+       case 10: case 11: case 12: case 13: case 14:
                 scoreFinal.textContent = `Bravo ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
                 break;
             case 15:
@@ -221,25 +216,58 @@ function checkAnswer(response) {
 
 
 
+        index++
+        // A partir de la page Wrong
+
+
+        const nextQuestionW = document.querySelector(".buttonNextW > button")
+        nextQuestionW.addEventListener("click", quizz)
+        nextQuestionW.dataset.index = index
+        // nextQuestionW.dataset.index = index
+
+
+        // A partir de la page Right
+        const nextQuestionR = document.querySelector(".buttonNextR > button")
+        nextQuestionR.addEventListener("click", quizz)
+        nextQuestionR.dataset.index = index
+
+        // nextQuestionR.dataset.index = index
+        // const goodAnswer = document.querySelector("#rightAnswer")
+
+    })
 
 // nextQuestion.addEventListener("click", quizz)
 // nextQuestion.dataset.index = questionnaire[i].question
 // questionnaire[i++].question
 
 
-
-
-// Code a trier
-
-// //pour afficher le score final sur la page endQuizz
-// const userScore = document.getElementsByClassName("userScore")
-// userScore.innerText = updatedScore
+})
+console.log(reponsesQuestion)
 
 
 
-//function endedQuizz()
-//const end = document.querySelector(".endQuizz")
-//.end.style.visibility="visible"
-//
+// function hideA() {
+//     const wrongAnswer = document.querySelector(".wrongAnswer")
+//     const displayWA = wrongAnswer.style.display
 
-//button restart => link to welcome page
+//     const rightAnswer = document.querySelector(".rightAnswer")
+//     const displayRA = rightAnswer.style.display
+
+
+
+//     if (displayWA == "block" || displayRA == "block") {
+//         displayWA.style.display = "none"
+//         displayRA.style.display = "none"
+//     }
+//     else {
+//         displayWA.style.display = "block"
+//         displayRA.style.display = "block"
+//     }
+// }
+
+
+// function hideButton() {
+
+//     document.getElementById('btn').style.display = 'none';
+
+// }

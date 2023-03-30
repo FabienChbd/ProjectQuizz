@@ -43,11 +43,20 @@ main {
 }
 
 #wrongAnswer {
-    visibility: hidden;
+
+    display: none;
 }
 
 #rightAnswer {
-    visibility: hidden;
+    display: none;
+
+}
+
+.cuteBear,
+.meanBear,
+.cheersPic {
+    display: none;
+
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -81,7 +90,9 @@ main {
 }
 
 .endQuizz {
-    visibility: hidden;
+
+    display: none;
+
 
 }
 
