@@ -166,7 +166,7 @@ function checkAnswer(response) {
     if (index < 14) {
         if (response.dataset.correct === "true") {
             const goodAnswer = document.querySelector("#rightAnswer")
-            goodAnswer.style.visibility = "visible"
+            goodAnswer.style.display="block"
             scoreBeer++
             console.log(scoreBeer)
             let scoreR = document.querySelector('.userScoreR')
@@ -174,14 +174,14 @@ function checkAnswer(response) {
         }
         else {
             const wrongAnswer = document.querySelector("#wrongAnswer")
-            wrongAnswer.style.visibility = "visible"
+            wrongAnswer.style.display="block"
             console.log(scoreBeer)
             let scoreW = document.querySelector('.userScoreW')
             scoreW.textContent = (`Tu as ${scoreBeer} `)
         }
     } else {
         const endOfQuizz = document.querySelector(".endQuizz")
-        endOfQuizz.style.visibility = "visible"
+        endOfQuizz.style.display="block"
         const scoreFinal = document.querySelector('.score')
         switch (scoreBeer) {
             case 0:
@@ -214,35 +214,6 @@ function checkAnswer(response) {
     console.log(`score ${scoreBeer}`);
 }
 
-
-
-        index++
-        // A partir de la page Wrong
-
-
-        const nextQuestionW = document.querySelector(".buttonNextW > button")
-        nextQuestionW.addEventListener("click", quizz)
-        nextQuestionW.dataset.index = index
-        // nextQuestionW.dataset.index = index
-
-
-        // A partir de la page Right
-        const nextQuestionR = document.querySelector(".buttonNextR > button")
-        nextQuestionR.addEventListener("click", quizz)
-        nextQuestionR.dataset.index = index
-
-        // nextQuestionR.dataset.index = index
-        // const goodAnswer = document.querySelector("#rightAnswer")
-
-    })
-
-// nextQuestion.addEventListener("click", quizz)
-// nextQuestion.dataset.index = questionnaire[i].question
-// questionnaire[i++].question
-
-
-})
-console.log(reponsesQuestion)
 
 
 
