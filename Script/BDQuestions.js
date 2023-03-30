@@ -120,6 +120,10 @@ let index = 0
 function quizz(event) {
     let index = event.target.dataset.index
     document.querySelector(".start").style.display = "none"
+    const rA = document.querySelector("#rightAnswer")
+    rA.style.display = "none"
+    const wA = document.querySelector("#wrongAnswer")
+    wA.style.display = "none"
 
     console.log(event.target)
     const question = document.querySelector('.quest')
