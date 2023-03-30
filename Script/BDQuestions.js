@@ -19,7 +19,7 @@ const questionnaire = [
     },
 
     {
-        question: "Qui a vécu aux États Unis ?",
+        question: "Qui a vécu en Angleterre ?",
         reponse: ["Amaury", "Wilhem", "Francois le Francais", "Nills"],
         correct: null
     },
