@@ -8,8 +8,8 @@ body {
 }
 
 main {
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 120px;
+    margin-bottom: 900px;
 }
 
 .copyright {
@@ -34,7 +34,7 @@ main {
 }
 
 .blocScore,
-.endQuizz {
+.finalScore {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,8 @@ main {
 .endOfQuizz {
     font-size: 200%;
     color: blue;
-    text-decoration: underline
+    text-decoration: underline;
+    text-align: center;
 }
 
 .userScoreR,
@@ -56,6 +57,7 @@ main {
 
 .beerCounter {
     padding-bottom: 20px;
+    margin: auto
 }
 
 #wrongAnswer {
@@ -66,8 +68,6 @@ main {
 #rightAnswer {
     display: none;
     height: 0
-
-
 }
 
 .cuteBear,
@@ -98,13 +98,19 @@ main {
     padding: 0;
 }
 
+
+.next:hover {
+    background-color: #cf9011;
+}
+
+
+.next:active {
+    background-color: #eabc60;
+}
+
 .cheersPic {
     display: flex;
     margin: auto;
-}
-
-.endOfQuizz {
-    text-align: center;
 }
 
 .endQuizz {
@@ -132,10 +138,10 @@ header {
     padding-right: 20px;
     grid-template-areas:
         "question question question"
-        ". reponse-1 ."
-        ". reponse-2 ."
-        ". reponse-3 ."
-        ". reponse-4 .";
+        "reponse-1 reponse-1 reponse-1"
+        "reponse-2 reponse-2 reponse-2"
+        "reponse-3 reponse-3 reponse-3"
+        "reponse-4 reponse-4 reponse-4";
 }
 
 .question {
@@ -146,6 +152,9 @@ header {
 .reponse-1 {
     grid-area: reponse-1;
     background-color: #228be6;
+    max-width: 80%;
+    margin-left: 10%;
+    justify-content: center;
 }
 
 .reponse-1:hover {
@@ -159,6 +168,9 @@ header {
 .reponse-2 {
     grid-area: reponse-2;
     background-color: #7950f2;
+    max-width: 80%;
+    margin-left: 10%;
+    justify-content: center;
 }
 
 .reponse-2:hover {
@@ -172,6 +184,9 @@ header {
 .reponse-3 {
     grid-area: reponse-3;
     background-color: #12b886;
+    max-width: 80%;
+    margin-left: 10%;
+    justify-content: center;
 }
 
 .reponse-3:hover {
@@ -185,6 +200,9 @@ header {
 .reponse-4 {
     grid-area: reponse-4;
     background-color: #e64980;
+    max-width: 80%;
+    margin-left: 10%;
+    justify-content: center;
 }
 
 .reponse-4:hover {
@@ -202,6 +220,7 @@ header {
 .reponse-3,
 .reponse-4 {
     display: flex;
+    min-width: 75%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -266,16 +285,27 @@ button {
     /* TODO - Ajouter une classe !!! */
     width: 250px;
     padding: 45px;
+    margin: auto;
+    margin-bottom: 80px;
     border-radius: 20px;
     box-shadow: 6px 6px 0px;
     border-style: solid;
-    position: center;
     font-size: 25px;
     display: block;
-    margin: auto;
     background-color: yellow;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: rgb(192, 192, 6)
+}
+
+button:active {
+    background-color: rgb(247, 247, 94)
+}
+
+
+
 
 .score {
     text-align: center;
@@ -315,14 +345,6 @@ button {
         margin-bottom: 400px;
     }
 
-    .endOfQuizz {
-        text-align: center;
-    }
-
-    .displayPseudo {
-        text-align: center;
-    }
-
     footer {
         flex-direction: row;
         justify-content: center;
@@ -332,5 +354,4 @@ button {
     .logo {
         max-width: 600px;
     }
-
 }
