@@ -38,7 +38,7 @@
         <div class="container">
             <div class="question">
 
-                <h1 class="quest">Question : </h1>
+                <h1 class="quest" align-center>Question : </h1>
             </div>
             <div class="reponse reponse-1" data-response="R1">
                 <p class="R1">Réponse-1 ?</p>
@@ -56,10 +56,10 @@
 
         <section class="answerPageCont">
             <div id="wrongAnswer">
-                <h1 class="answerPage"> Mauvaise Réponse <br>J'ai soif !!
+                <h1 class="answerPageW"> Mauvaise Réponse <br>J'ai soif !!
                 </h1>
                 <img class="bear" src="assets/meanBear.png" width="200" alt="image cartoon d'un ours en colere">
-                <div>
+                <div class=blocScore>
                     <p class="scoreTitle"> Score:</p>
                     <p class="userScoreW"></p>
                     <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
@@ -70,10 +70,10 @@
                 </div>
             </div><br>
             <div id="rightAnswer">
-                <h1 class="answerPage"> Bravo bonne réponse <br>!! </h1>
+                <h1 class="answerPageR"> Bravo bonne réponse <br>!! </h1>
                 <img class="bear" src="assets/cuteBear.png" width="200" alt="image cartoon d'un ourson mignon"><br>
 
-                <div>
+                <div class=blocScore>
                     <p class="scoreTitle"> Score:</p>
                     <p class="userScoreR"></p>
                     <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
@@ -84,23 +84,13 @@
             </div>
         </section>
 
-        <section class="endQuizz">
+        <div class="endQuizz">
             <h1 class="endOfQuizz">Fin du Quizz</h1>
-
-            <div class="score">Affichage du score dans quelques instants...</div>
-            <div><img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere"></div>
-            <!-- if score <5
-        tu ne connais pas assez ta promo, l'ours est assoiffe et a envie de te devorer-->
-            <!-- if score >=5<9  tu y es presque l'ours a encore soif mais il a un stock de biere suffisant
--->
-
-            <img class="bear meanBear" src="assets/meanBear.png" width="200" alt="image cartoon d'un ours en colere">
-            <!-- positionner l'ours dans un coin de la page-->
+            <div class="score">Affichage du score dans quelques instants...</div><br>
+            <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
             <img class="cheersPic" src="assets/cheers.png " width="200" alt="icones de chopes de bieres trinquant">
-            <!--   && 10  bravo tu connais bien la promo, l'ours est ton ami.-->
-            <img class="bear cuteBear" src="assets/cuteBear.png" width="200" alt="image cartoon d'un ourson mignon">
 
-        </section>
+        </div>
     </main>
     <footer>
         <p class="copyright">© Créé par Delphine Fabien Thomas Cathy</p>
