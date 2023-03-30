@@ -8,7 +8,7 @@ body {
 }
 
 main {
-    margin-top: 30px;
+    margin-top: 70px;
     margin-bottom: 50px;
 }
 
@@ -17,8 +17,14 @@ main {
 }
 
 /* Centrage du texte sur la page*/
-.answerPage {
+.answerPageW {
     text-align: center;
+    color: red
+}
+
+.answerPageR {
+    text-align: center;
+    color: green
 }
 
 /*image et score de la page end mobilefirst*/
@@ -27,36 +33,43 @@ main {
     margin: auto;
 }
 
-.scoreTitle {
-    font-size: 120%;
+.blocScore,
+.endQuizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.userScore {
+.scoreTitle,
+.endOfQuizz {
+    font-size: 200%;
+    color: blue;
+    text-decoration: underline
+}
+
+.userScoreR,
+.userScoreW,
+.score {
     font-size: 140%;
-    margin-left: 15px;
+    color: blue
 }
 
 .beerCounter {
-    position: flex;
-    margin-left: 50px;
-    margin-top: -70px;
+    padding-bottom: 20px;
 }
 
 #wrongAnswer {
-
     display: none;
 }
 
 #rightAnswer {
     display: none;
-
 }
 
 .cuteBear,
 .meanBear,
 .cheersPic {
     display: none;
-
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -90,10 +103,7 @@ main {
 }
 
 .endQuizz {
-
     display: none;
-
-
 }
 
 header {
@@ -237,9 +247,9 @@ header {
 /*MAJ 270323.15:38 - à vérifier sur le index si ok / NOK - TODO : Utiliser une classe !! rattaché à l'inde.html */
 .quizz {
     text-align: center;
-    font-weight: bolder;
-    font-family: sans-serif;
-    font-size: 3.5em;
+    font-family: 'Permanent Marker', arial, "sans serif";
+    font-size: 2.7em;
+    color: #550000;
     margin-top: 90px;
     margin-bottom: 20px;
 
@@ -249,6 +259,7 @@ header {
 .hello {
     font-size: 2em;
     text-align: center;
+    color: #550000;
 }
 
 /*Bouton non fonctionnel sur la page index.html*/
@@ -380,25 +391,9 @@ button {
 
     /*images et counter pour page endquizz*/
     .bear {
-        width: 40%;
+        width: 25%;
     }
 
-    .scoreTitle {
-        font-size: 190%;
-        margin-left: 140px;
-    }
-
-    .userScore {
-        margin-left: 220px;
-        font-size: 200%;
-    }
-
-    .beerCounter {
-        position: flex;
-        margin-left: 260px;
-        margin-top: -90px;
-        width: 10%;
-    }
 
     .buttonNext {
         display: flex;

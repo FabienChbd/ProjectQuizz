@@ -119,7 +119,7 @@ let index = 0
 //Implantation dans le HTML
 function quizz(event) {
     let index = event.target.dataset.index
-      document.querySelector(".start").style.display = "none"
+    document.querySelector(".start").style.display = "none"
 
     console.log(event.target)
     const question = document.querySelector('.quest')
@@ -147,12 +147,12 @@ reponsesQuestion.forEach(response => {
         const nextQuestionW = document.querySelector(".buttonNextW > button")
         nextQuestionW.addEventListener("click", quizz)
         nextQuestionW.dataset.index = index
-        nextQuestionW.dataset.index = index
+
         // A partir de la page Right
         const nextQuestionR = document.querySelector(".buttonNextR > button")
         nextQuestionR.addEventListener("click", quizz)
         nextQuestionR.dataset.index = index
-        nextQuestionR.dataset.index = index
+
     })
 })
 
@@ -166,7 +166,7 @@ function checkAnswer(response) {
     if (index < 14) {
         if (response.dataset.correct === "true") {
             const goodAnswer = document.querySelector("#rightAnswer")
-            goodAnswer.style.display="block"
+            goodAnswer.style.display = "block"
             scoreBeer++
             console.log(scoreBeer)
             let scoreR = document.querySelector('.userScoreR')
@@ -174,14 +174,14 @@ function checkAnswer(response) {
         }
         else {
             const wrongAnswer = document.querySelector("#wrongAnswer")
-            wrongAnswer.style.display="block"
+            wrongAnswer.style.display = "block"
             console.log(scoreBeer)
             let scoreW = document.querySelector('.userScoreW')
             scoreW.textContent = (`Tu as ${scoreBeer} `)
         }
     } else {
         const endOfQuizz = document.querySelector(".endQuizz")
-        endOfQuizz.style.display="block"
+        endOfQuizz.style.display = "block"
         const scoreFinal = document.querySelector('.score')
         switch (scoreBeer) {
             case 0:
@@ -193,13 +193,13 @@ function checkAnswer(response) {
             case 2:
                 scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
                 break;
-                  case 3: case 4: case 5: case 6:
+            case 3: case 4: case 5: case 6:
                 scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas.COURS VITE!!!`;
                 break;
-                      case 7: case 8: case 9:
+            case 7: case 8: case 9:
                 scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
                 break;
-       case 10: case 11: case 12: case 13: case 14:
+            case 10: case 11: case 12: case 13: case 14:
                 scoreFinal.textContent = `Bravo ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières largement suffisant, il t'en paye même une !!! Reste sur tes gardes tout de même, un ours reste un ours.`;
                 break;
             case 15:
