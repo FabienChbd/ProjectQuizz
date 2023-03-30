@@ -43,6 +43,7 @@ main {
 }
 
 #wrongAnswer {
+
     display: none;
 }
 
@@ -55,6 +56,7 @@ main {
 .meanBear,
 .cheersPic {
     display: none;
+
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -88,7 +90,9 @@ main {
 }
 
 .endQuizz {
+
     display: none;
+
 
 }
 
