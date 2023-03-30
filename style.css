@@ -9,15 +9,10 @@ body {
     background-color: #f5f5dc;
 }
 
- /*Apparement pas d'utilité*/
-/*main { 
 
+main {
     margin-top: 30px;
-
-    margin-bottom: 50px;
-    /*width: 90%;*/
-    /* margin: auto;
-}*/
+    margin-bottom: 50px;}
 
 .copyright {
     margin: 2px;
@@ -49,12 +44,18 @@ body {
     margin-top: -70px;
 }
 
-#wrongAnswer{
-    visibility:hidden;
+#wrongAnswer {
+    display: none;
 }
 
-#rightAnswer{
-    visibility:hidden;
+#rightAnswer {
+    display: none;
+}
+
+.cuteBear,
+.meanBear,
+.cheersPic {
+    display: none;
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -85,6 +86,10 @@ body {
 
 .endOfQuizz {
     text-align: center;
+}
+
+.endQuizz {
+    display: none;
 }
 
 header {
@@ -170,6 +175,7 @@ header {
 }
 
 /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
+.question,
 .reponse-1,
 .reponse-2,
 .reponse-3,
@@ -177,15 +183,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px rgb(101, 93, 93) solid;
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.question {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     border: 2px rgb(101, 93, 93) solid;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -206,8 +204,6 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 0.7em;
- 
-
 }
 
 footer,
@@ -250,109 +246,18 @@ button {
     display: block;
     margin: auto;
     background-color: yellow;
-    cursor:pointer;
-    
+    cursor: pointer;
+}
+
+.score {
+    text-align: center;
 }
 
 
-
-@media screen and (max-width : 600px) {
-    button {
-        /* TODO - Ajouter une classe !!! */
-        width: 100px;
-        padding: 15px;
-        border-radius: 20px;
-        box-shadow: 6px 6px 0px;
-        border-style: solid;
-        position: center;
-        font-size: 25px;
-        display: block;
-        margin: auto;
-        background-color: yellow;
-        cursor:pointer;
-    }
-    
-    .logo {
-        width: 50%;
-        height: 50%;
-        margin: auto;
-        display: flex;
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
-        grid-auto-flow: row;
-        gap: 10px 10px;
-        grid-template-areas:
-            "question question question"
-            ". reponse-1 ."
-            ". reponse-2 ."
-            ". reponse-3 ."
-            ". reponse-4 ."
-            ". valider .";
-    }
-    
-    .question {
-        grid-area: question;
-        background-color: #fa5252;
-    }
-    
-    .reponse-1 {
-        grid-area: reponse-1;
-        background-color: #228be6;
-    }
-    
-    .reponse-2 {
-        grid-area: reponse-2;
-        background-color: #7950f2;
-    }
-    
-    .reponse-3 {
-        grid-area: reponse-3;
-        background-color: #12b886;
-    }
-    
-    .reponse-4 {
-        grid-area: reponse-4;
-        background-color: #e64980;
-    }
-    
-    .valider {
-        grid-area: valider;
-        background-color: #ffc45e;
-    }
-    
-    .valider:hover,
-    .next:hover {
-        background-color: coral;
-    }
-    
-    .valider:active,
-    .next:active {
-        background-color: green;
-    }
-    
-    /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
-    .question,
-    .reponse-1,
-    .reponse-2,
-    .reponse-3,
-    .reponse-4,
-    .valider {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px rgb(101, 93, 93) solid;
-        border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-}
-/*ne sert à rien
 .go{
     padding-bottom : 40px;
-}*/
+    margin-bottom:-20px;
+    margin-top :-50px;
 
 
 /* au passage en vue Desktop l'affichage grid change*/
@@ -367,8 +272,6 @@ button {
             "reponse-3 reponse-3 reponse-4 reponse-4";
     }
 
-    /*images et counter pour page endquizz*/
-    
     .bear {
         width: 40%;
     }
@@ -411,7 +314,6 @@ button {
         text-align: center;
     }
 
-    /*recup le pseudo sur la page endQuizz*/
     .displayPseudo {
         text-align: center;
     }
@@ -429,11 +331,4 @@ button {
          margin :auto;
        
     }
-
-
-    .go{
-        padding-bottom : 40px;
-       margin-bottom:-20px;
-      margin-top :-50px;
-}
-}
+    }
