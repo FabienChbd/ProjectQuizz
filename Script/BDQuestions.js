@@ -186,6 +186,8 @@ function checkAnswer(response) {
     } else {
         const endOfQuizz = document.querySelector(".endQuizz")
         endOfQuizz.style.display = "block"
+        const cheers = document.querySelector(".cheersPic")
+        cheers.style.display = "block"
         const scoreFinal = document.querySelector('.score')
         switch (scoreBeer) {
             case 0:
@@ -200,7 +202,7 @@ function checkAnswer(response) {
                 scoreFinal.textContent = `Désolé ${pseudo}, mais apparemment tu ne te connais que toi - même, car l'ours n'a eu qu'une seule bière. L'ours va donc te dévorer.`;
                 break;
             case 3: case 4: case 5: case 6:
-                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas.COURS VITE!!!`;
+                scoreFinal.textContent = `Désolé ${pseudo}, mais l'ours n'a eu que ${scoreBeer} bières.Tu ne connais pas assez sa promotion, il va donc te considérer comme son futur repas. COURS VITE!!!`;
                 break;
             case 7: case 8: case 9:
                 scoreFinal.textContent = `Presque ${pseudo}! L'ours a eu ${scoreBeer} bières. L'ours a un stock de bières suffisant, mais envisage rapidement de courir...`;
