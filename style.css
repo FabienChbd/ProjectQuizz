@@ -34,14 +34,14 @@ main {
 }
 
 .blocScore,
-.endQuizz {
+.finalScore {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .scoreTitle,
-.endQuizz {
+.endOfQuizz {
     font-size: 200%;
     color: blue;
     text-decoration: underline
@@ -56,6 +56,7 @@ main {
 
 .beerCounter {
     padding-bottom: 20px;
+    margin: auto
 }
 
 #wrongAnswer {
