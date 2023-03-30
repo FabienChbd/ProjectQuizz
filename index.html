@@ -1,44 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr">
+
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <title>Quizz : A beer for the bear !</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Quizz : A beer for the bear !</title>
 </head>
 
 <body>
-  <header>
-    <div class=titre> A beer for the bear </div>
-  </header>
+    <header>
+        <div class=titre> A beer for the bear </div>
+    </header>
 
-  <main>
-    <h1 class="quizz">QUIZZ</h1>
-    <div>
-      <img class="logo" src="assets/logoquiz.png" alt="Logo du quizz">
-    </div>
+    <main>
+        <div class="start">
+            <h1 class="quizz">QUIZZ</h1>
+            <div>
+                <img class="logo" src="assets/logoquiz.png" alt="Logo du quizz">
+            </div>
+            <div>
+                <p class="hello">Hello Wilder !!!</p><br>
+            </div>
+            <div class="go">
+                <button type="submit" data-index="0">Go</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="question">
+
+                <h1 class="quest" align-center>Question : </h1>
+            </div>
+            <div class="reponse reponse-1" data-response="R1">
+                <p class="R1">Réponse-1 ?</p>
+            </div>
+            <div class="reponse reponse-2" data-response="R2">
+                <p class="R2">Réponse-2 ?</p>
+            </div>
+            <div class="reponse reponse-3" data-response="R3">
+                <p class="R3">Réponse-3 ?</p>
+            </div>
+            <div class="reponse reponse-4" data-response="R4">
+                <p class="R4">Réponse-4 ?</p>
+            </div>
+        </div>
+
+        <section class="answerPageCont">
+            <div id="wrongAnswer">
+                <h1 class="answerPageW"> Mauvaise Réponse <br>J'ai soif !!
+                </h1>
+                <img class="bear" src="assets/meanBear.png" width="200" alt="image cartoon d'un ours en colere">
+                <div class=blocScore>
+                    <p class="scoreTitle"> Score:</p>
+                    <p class="userScoreW"></p>
+                    <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
+
+                </div>
+                <div class="buttonNextW">
+                    <button class="next"> Question suivante</button>
+                </div>
+            </div><br>
+            <div id="rightAnswer">
+                <h1 class="answerPageR"> Bravo bonne réponse <br>!! </h1>
+                <img class="bear" src="assets/cuteBear.png" width="200" alt="image cartoon d'un ourson mignon"><br>
+
+                <div class=blocScore>
+                    <p class="scoreTitle"> Score:</p>
+                    <p class="userScoreR"></p>
+                    <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
+                </div>
+                <div class="buttonNextR">
+                    <button class="next">Question suivante</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="endQuizz">
+            <h1 class="endOfQuizz">Fin du Quizz</h1>
+            <div class="score">Affichage du score dans quelques instants...</div><br>
+            <img class="beerCounter" src="assets/beerCounter.png" width="70" alt="icone d'une biere">
+            <img class="cheersPic" src="assets/cheers.png " width="200" alt="icones de chopes de bieres trinquant">
+
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">© Créé par Delphine Fabien Thomas Cathy</p>
+        <p class="copyright">#Team Jean Pierre Foucault</p>
+    </footer>
 
 
-    <div>
-      <p class="hello">Hello Wilder !!!</p><br>
-    </div>
+    <script src="Script/Hello.js"></script>
+    <script src="Script/BDQuestions.js"></script>
+    <script src="Script/Score.js"></script>
 
-
-    <div class="go">
-      <button type="submit">Go</button>
-    </div>
-  </main>
-
-  <footer>
-    <p class="copyright">© Créé par Delphine Fabien Thomas Cathy</p>
-    <p class="copyright">#Team Jean Pierre Foucault</p>
-  </footer>
-  <script src="Script/Hello.js"></script>
 </body>
 
 </html>

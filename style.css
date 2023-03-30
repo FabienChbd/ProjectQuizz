@@ -2,41 +2,29 @@
     font-size: 2em;
 }
 
-/* Body original couleur + padding pourquoi ??? */
 body {
-
-    /* padding-top: 60px;
-    padding-bottom: 60px;*/
     margin: 0;
-
     background-color: #f5f5dc;
 }
 
-/*POur moi non OK // Si besoin sur la page html concerné utilisé une class // utilité des 3 margin + valeur de la width ?*/
-
 main {
-    margin-top: 120px;
-
-    margin-bottom: 60px;
-    /*width: 90%;*/
-    /* margin: auto;*/
-
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
-
-/*? de qui? a voir*/
-/*a {
-    text-decoration : none;
-}*/
-
-/* Margin pour décoller du haut du footer */
 
 .copyright {
     margin: 2px
 }
 
 /* Centrage du texte sur la page*/
-.answerPage {
+.answerPageW {
     text-align: center;
+    color: red
+}
+
+.answerPageR {
+    text-align: center;
+    color: green
 }
 
 /*image et score de la page end mobilefirst*/
@@ -45,19 +33,48 @@ main {
     margin: auto;
 }
 
-.scoreTitle {
-    font-size: 120%;
+.blocScore,
+.endQuizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.userScore {
+.scoreTitle,
+.endOfQuizz {
+    font-size: 200%;
+    color: blue;
+    text-decoration: underline
+}
+
+.userScoreR,
+.userScoreW,
+.score {
     font-size: 140%;
-    margin-left: 15px;
+    color: blue
 }
 
 .beerCounter {
-    position: flex;
-    margin-left: 50px;
-    margin-top: -70px;
+    padding-bottom: 20px;
+}
+
+#wrongAnswer {
+    display: none;
+    height: 0;
+}
+
+#rightAnswer {
+    display: none;
+    height: 0
+
+
+}
+
+.cuteBear,
+.meanBear,
+.cheersPic {
+    display: none;
+    height: 0
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -70,8 +87,6 @@ main {
     height: 50px;
     margin: auto;
 }
-
-
 
 .next {
     background-color: #FFBD3A;
@@ -92,18 +107,11 @@ main {
     text-align: center;
 }
 
-/*Ajout du pseudo sur la page endQuizz html*/
-/*.displayPseudo {
-    text-align: center;
-    font-size: 180%;
+.endQuizz {
+    display: none;
+    height: 0
 }
 
-.scoreSentence {
-    font-size: 120%;
-}
-*/
-
-/*Header pour moi (tv) c'est OK*/
 
 header {
     position: fixed;
@@ -114,21 +122,20 @@ header {
     font-size: 1.2em;
 }
 
-/* css grid mobile first */
-
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-flow: row;
-    gap: 20px 20px;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     grid-template-areas:
         "question question question"
         ". reponse-1 ."
         ". reponse-2 ."
         ". reponse-3 ."
-        ". reponse-4 ."
-        ". valider .";
+        ". reponse-4 .";
 }
 
 .question {
@@ -141,9 +148,25 @@ header {
     background-color: #228be6;
 }
 
+.reponse-1:hover {
+    background-color: #1376cc;
+}
+
+.reponse-1:active {
+    background-color: #68afee;
+}
+
 .reponse-2 {
     grid-area: reponse-2;
     background-color: #7950f2;
+}
+
+.reponse-2:hover {
+    background-color: #6840e1;
+}
+
+.reponse-2:active {
+    background-color: #a189ea;
 }
 
 .reponse-3 {
@@ -151,24 +174,25 @@ header {
     background-color: #12b886;
 }
 
+.reponse-3:hover {
+    background-color: #0b936a;
+}
+
+.reponse-3:active {
+    background-color: #64cdae;
+}
+
 .reponse-4 {
     grid-area: reponse-4;
     background-color: #e64980;
 }
 
-.valider {
-    grid-area: valider;
-    background-color: #ffc45e;
+.reponse-4:hover {
+    background-color: #bd3263;
 }
 
-.valider:hover,
-.next:hover {
-    background-color: coral;
-}
-
-.valider:active,
-.next:active {
-    background-color: green;
+.reponse-4:active {
+    background-color: #e37fa2;
 }
 
 /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
@@ -176,16 +200,19 @@ header {
 .reponse-1,
 .reponse-2,
 .reponse-3,
-.reponse-4,
-.valider {
+.reponse-4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border: 2px rgb(101, 93, 93) solid;
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/*modif du todo --> la taille est fixe le problème vient du flex ou de la grid
+CODE HERE
+fin des modifs*/
 /* FIN du css grid mobile first */
 
 footer {
@@ -197,7 +224,7 @@ footer {
     background-color: #fab005;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    font-size: 0.8em
+    font-size: 0.7em;
 }
 
 footer,
@@ -218,11 +245,11 @@ header {
 /*MAJ 270323.15:38 - à vérifier sur le index si ok / NOK - TODO : Utiliser une classe !! rattaché à l'inde.html */
 .quizz {
     text-align: center;
-    font-weight: bolder;
-    font-family: sans-serif;
-
-    font-size: 4em;
-    margin-top: 60px;
+    font-family: 'Permanent Marker', arial, "sans serif";
+    font-size: 2.7em;
+    color: #550000;
+    margin-top: 90px;
+    margin-bottom: 20px;
 
 }
 
@@ -230,13 +257,15 @@ header {
 .hello {
     font-size: 2em;
     text-align: center;
+    color: #550000;
 }
 
 /*Bouton non fonctionnel sur la page index.html*/
+
 button {
     /* TODO - Ajouter une classe !!! */
-    width: 200px;
-    padding: 40px;
+    width: 250px;
+    padding: 45px;
     border-radius: 20px;
     box-shadow: 6px 6px 0px;
     border-style: solid;
@@ -245,44 +274,31 @@ button {
     display: block;
     margin: auto;
     background-color: yellow;
+    cursor: pointer;
+}
+
+.score {
+    text-align: center;
 }
 
 /* au passage en vue Desktop l'affichage grid change*/
 @media screen and (min-width: 600px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 60px 20px;
         grid-template-areas:
             "question question question question"
             "reponse-1 reponse-1 reponse-2 reponse-2"
-            "reponse-3 reponse-3 reponse-4 reponse-4"
-            ". valider valider .";
+            "reponse-3 reponse-3 reponse-4 reponse-4";
     }
 
-/*images et counter pour page endquizz*/
     .bear {
-        width: 40%;
+        width: 25%;
     }
 
-    .scoreTitle {
-        font-size: 190%;
-        margin-left: 140px;
-    }
 
-    .userScore {
-        margin-left: 220px;
-        font-size: 200%;
-    }
-
-    .beerCounter {
-        position: flex;
-        margin-left: 260px;
-        margin-top: -90px;
-        width: 10%;
-    }
-
-   .buttonNext {
+    .buttonNext {
         display: flex;
         margin-left: 400px;
         width: 400px;
@@ -303,18 +319,15 @@ button {
         text-align: center;
     }
 
-/*recup le pseudo sur la page endQuizz*/
     .displayPseudo {
         text-align: center;
     }
-
 
     footer {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
-
 
     .logo {
         max-width: 600px;
