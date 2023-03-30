@@ -217,6 +217,7 @@ function checkAnswer(response) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // nextQuestion.addEventListener("click", quizz)
@@ -226,6 +227,8 @@ function checkAnswer(response) {
 
 
 
+=======
+>>>>>>> 9d30a824fc10a4bbfe759eff846488b518908a9d
 
 
 =======
