@@ -8,15 +8,8 @@ body {
 }
 
 main {
-    <<<<<<< HEAD margin-top: 30px;
-
+    margin-top: 30px;
     margin-bottom: 50px;
-    /*width: 90%;*/
-    /* margin: auto;*/
-
-    =======margin-top: 120px;
-    margin-bottom: 60px;
-    >>>>>>>5a45d6401fc3e97273ca3d18d1e18ab347f3b43a
 }
 
 .copyright {
@@ -50,11 +43,20 @@ main {
 }
 
 #wrongAnswer {
-    visibility: hidden;
+
+    display: none;
 }
 
 #rightAnswer {
-    visibility: hidden;
+    display: none;
+
+}
+
+.cuteBear,
+.meanBear,
+.cheersPic {
+    display: none;
+
 }
 
 /*Toute cette partie est ok pour moi (tv)*/
@@ -85,6 +87,13 @@ main {
 
 .endOfQuizz {
     text-align: center;
+}
+
+.endQuizz {
+
+    display: none;
+
+
 }
 
 header {
@@ -260,6 +269,10 @@ button {
 
 }
 
+.score {
+    text-align: center;
+}
+
 
 
 @media screen and (max-width : 600px) {
@@ -285,7 +298,7 @@ button {
         grid-auto-flow: row;
         gap: 10px 10px;
         grid-template-areas:
-            "quest quest quest"
+            "question question question"
             ". reponse-1 ."
             ". reponse-2 ."
             ". reponse-3 ."
@@ -293,7 +306,7 @@ button {
             ". valider .";
     }
 
-    .quest {
+    .question {
         grid-area: question;
         background-color: #fa5252;
     }
@@ -334,7 +347,7 @@ button {
     }
 
     /* TODO : Reprende les responses --> Mettre des dimensions au box + mettre un active pour manifester le choix de la réponse à l'utilisateur */
-    .quest,
+    .question,
     .reponse-1,
     .reponse-2,
     .reponse-3,
@@ -360,7 +373,7 @@ button {
         grid-template-rows: 1fr 1fr 1fr;
         gap: 60px 20px;
         grid-template-areas:
-            "quest quest quest quest"
+            "question question question question"
             "reponse-1 reponse-1 reponse-2 reponse-2"
             "reponse-3 reponse-3 reponse-4 reponse-4";
     }
