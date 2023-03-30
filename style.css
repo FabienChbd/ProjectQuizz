@@ -44,7 +44,8 @@ main {
 .endOfQuizz {
     font-size: 200%;
     color: blue;
-    text-decoration: underline
+    text-decoration: underline;
+    text-align: center;
 }
 
 .userScoreR,
@@ -108,10 +109,6 @@ main {
 .cheersPic {
     display: flex;
     margin: auto;
-}
-
-.endOfQuizz {
-    text-align: center;
 }
 
 .endQuizz {
@@ -334,10 +331,6 @@ button {
         width: 200px;
         height: 50px;
         margin-bottom: 400px;
-    }
-
-    .endOfQuizz {
-        text-align: center;
     }
 
     .displayPseudo {
